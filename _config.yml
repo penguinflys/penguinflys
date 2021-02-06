@@ -26,8 +26,8 @@ baseurl                  : "/penguinflys" # the subpath of your site, e.g. "/blo
 repository               : "penguinflys/penguinflys" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/utils/tease.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/utils/weblogo.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "You Genius, replace the title" # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
@@ -76,7 +76,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/utils/weblogo.jpg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -96,9 +96,9 @@ analytics:
 author:
   name             : Jie Yuan
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Hannover"
-  email            :
+  bio              : "Let's Rock A.I."
+  location         : "Hannover, Germmany"
+  email            : yuanjielovejesus@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -127,13 +127,13 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://twitter.com/JieYuan16574969"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url:
+      url: "https://www.facebook.com/jie.yuan.52459/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/penguinflys"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -145,7 +145,7 @@ footer:
       # url:
     - label: "LinekdIn"
       icon: "fab fa-fw fa-linkedin-in"
-      # url:
+      url: "https://www.linkedin.com/in/jie-yuan-915573197/"
 
 # Reading Files
 include:
