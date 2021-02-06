@@ -1,0 +1,4 @@
+I"ç<blockquote>
+  <p>The multi-armed bandit problem is a classic example to demonstrate the exploration versus exploitation dilemma. This post introduces the bandit problem and how to solve it using different exploration strategies. The algorithms are implemented for Bernoulli bandit in <a href="https://github.com/lilianweng/multi-armed-bandit">lilianweng/multi-armed-bandit</a>.</p>
+</blockquote>
+:ET
