@@ -9,4 +9,3 @@ gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"] == "~> 3.9"
 gem "github-pages", group: :jekyll_plugins
 gem "jekyll-include-cache", group: :jekyll_plugins
 
-remote_theme: "mmistakes/minimal-mistakes@4.21.0"
