@@ -16,23 +16,23 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Flying Penguin - Home"
+title                    : "Penguin's Log - Home"
 title_separator          : "|"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : &myname "Jie Yuan"
-description              : "This is the site noting some fun, idea and knowledge"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+subtitle                 : "swim deep, fly high" # site tagline that appears below site title in masthead
+name                     :  "Jie Yuan"
+description              : "bling bling, good idea"
+url                      : "https://penguinflys.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/penguinflys" # the subpath of your site, e.g. "/blog"
+repository               : "penguinflys/penguinflys" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                   : "/assets/utils/tease.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : "/assets/utils/weblogo.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "You Genius, replace the title" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "penguinflys" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -61,7 +61,7 @@ algolia:
   search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
 google:
-  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
+  search_engine_id       : "3f66297701220b8fb" # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
 google_site_verification :
@@ -94,7 +94,7 @@ analytics:
 
 # Site Author
 author:
-  name             : *myname
+  name             : Jie Yuan
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
   location         : "Hannover"
@@ -120,7 +120,7 @@ author:
       # url: "https://instagram.com/"
     - label: "LinekdIn"
       icon: "fab fa-fw fa-linkedin-in"
-      # url:
+      url: "https://www.linkedin.com/in/jie-yuan-915573197/"
 
 # Site Footer
 footer:
