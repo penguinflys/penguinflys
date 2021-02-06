@@ -1,4 +1,0 @@
-I"g<blockquote>
-  <p>This post is a continued tutorial for how to build a recurrent neural network using Tensorflow to predict stock market prices. Part 2 attempts to predict prices of multiple stocks using embeddings. The full working code is available in <a href="https://github.com/lilianweng/stock-rnn">github.com/lilianweng/stock-rnn</a>.</p>
-</blockquote>
-:ET
