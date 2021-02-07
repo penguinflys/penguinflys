@@ -1,0 +1,13 @@
+Jie Yuan:
+  name: "Jie Yuan"
+  bio: "Ask and it will be given to you; <br>seek and you will find; <br>knock and the door will be opened to you."
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:yuanjielovejesus@gmail.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/penguinflys"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/jie-yuan-915573197/"

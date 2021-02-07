@@ -1,2 +1,2 @@
-## Log Jie Yuan
+# Log Jie Yuan
 Aloha, bro
