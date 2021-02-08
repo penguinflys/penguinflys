@@ -36,7 +36,7 @@ Here is books that I like reviews alot in my developemnt:
 
 ## Projects
 
-The following are some projects that is done as student or student research assistant.
+The following are some projects that is done as student or student research assistant. Most of those projects are submitted and no licience 
 
 ### LEGO Courier Student Toy Project
 
@@ -75,11 +75,11 @@ This is the first project requires knowledge of SLAM. it is developed in C++ wit
 
 * Calibration: The courier has to run in a consistent coordinate system, which means camera and lidar need to be calibrated to global coordinate system. This process is simplified to align all coordiantes to the predefined 2D image coordinate system. Robot coordiante is accesed by a cheesboard fixed in the courier body. LIDAR is calibrated with manual tape measurement. Because the odometry of courier is broken, visual odometry plays an important role.
 
-* Localization: Localization from camera is not accurate, as monocular camera has no scale estimation, although it can be approximated by cheeseboard grid size scale estimation. But it did not perform as thought. Finally, coordinate from camera are simply traingulated with a fixed height parameter. Localization from LIDAR is initialized by coordiantes from camera, but updated with local measurement of similarity transformation prediction via ICP algorithm. The location of courier is determined by kalman filtering.
+* Localization: Localization from external camera is not accurate, as monocular camera has no scale estimation, although it can be approximated by cheeseboard grid size scale estimation. But it did not perform as thought. Finally, coordinate from camera are simply traingulated with a fixed height parameter. Localization from LIDAR is initialized by coordiantes from camera, but updated with local measurement of similarity transformation prediction via ICP algorithm. The location of the courier is determined by kalman filtering.
 
-* Mapping: It was not allowed to take any extra ROS packages in this project. I applied 2 dimentional grid map, with moderate resolution, simply visualized in OpenCV window, which can also be seen in the video. Besides, grid map makes path planning easier.
+* Mapping: It was not allowed to take any extra ROS packages in this project. I applied 2 dimensional grid map, with a moderate resolution, simply visualized in the OpenCV window, which can also be seen in the video. Besides, a grid map makes path planning easier.
 
-* Motion Planning: A* algorhthm with buffered/cost map.
+* Motion Planning: A* algorithm with buffered/cost map.
 
 * Control: Iteration of going and turning.
 
