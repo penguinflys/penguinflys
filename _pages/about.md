@@ -13,19 +13,19 @@ author_profile: true
 ---
 ## Biography
 
-I am a graduate of the [Leibiniz Universität Hannover](https://www.uni-hannover.de/) in program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing at deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Just like other guys, I have a mixed feelings on programing languages, still, Python(for deep learning) and C++(for SLAM) are my principal developing language, and sometimes I use Matlab for fast verfication of algorithms.
+I am a graduate of the [Leibiniz Universität Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Python(for deep learning) and C++(for SLAM) are my principal developing language, and sometimes I use Matlab for fast verification of algorithms.
 
 <!-- I used to be dogmatic, selfish, and ambitious to become someone that can really make a difference, but God has changed me to love others take care of people who I love and give more instead of asking more. In the aspect of personality and psychology, I am a bit like "Bruce" in [7 Up series](https://en.wikipedia.org/wiki/Up_(film_series)). -->
 Please feel free to contact me.
 
 ## Skills
 
-I am fond of cooking. If it is possible to selct a second occupation, it must be a cook. I subscribe youtube channels [Chef Wang](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw), [老饭骨](https://www.youtube.com/channel/UCBJmYv3Vf_tKcQr5_qmayXg), and [小高姐的 Magic Ingredients](https://www.youtube.com/channel/UCCKlp1JI9Yg3-cUjKPdD3mw).
+I am fond of cooking. If it is possible to select a second occupation, it must be a cook. I subscribe youtube channels [Chef Wang](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw), [老饭骨](https://www.youtube.com/channel/UCBJmYv3Vf_tKcQr5_qmayXg), and [小高姐的 Magic Ingredients](https://www.youtube.com/channel/UCCKlp1JI9Yg3-cUjKPdD3mw).
 
 
 ## Technique Books
 
-Here is books that I like reviews alot in my developemnt:
+Here are books that I like reviews a lot during development:
 
 * [Probabilistic Robotics](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf)
 * [State Estimation for Robotics](http://asrl.utias.utoronto.ca/~tdb/bib/barfoot_ser17.pdf)
@@ -36,7 +36,15 @@ Here is books that I like reviews alot in my developemnt:
 
 ## Projects
 
-The following are some projects that is done as student or student research assistant. Most of those projects are submitted and no licience 
+The following are some projects that is done as student or student research assistant. Most of those projects are submitted and I cannot open the repository. 
+
+### Digital Earth based on WMS
+
+![image-center]({{ "/assets/images/digitalearth.png" | relative_url }}){: .align-center style="width: 100%;"}
+*Fig. 0 Visualization of Digital Earth with DEM model*
+{: .text-center}
+
+This project is a teaching project which simulate the elevation of earth, and depth of ocean, it is initialy based on the [icosahedron](https://en.wikipedia.org/wiki/Icosahedron), and iteratively refined in a deeper level to sample the local elevation. it can also simulate the graviety field if the data is in hand.
 
 ### LEGO Courier Student Toy Project
 
