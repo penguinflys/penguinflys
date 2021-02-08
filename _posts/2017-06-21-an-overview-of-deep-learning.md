@@ -1,8 +1,8 @@
 ---
 layout: single
-comments: true
+comments: false
 title: "An Overview of Deep Learning for Curious People"
-date_label: 2017-06-21 01:09:00
+date: 2017-06-21 01:09:00
 tags: review
 ---
 

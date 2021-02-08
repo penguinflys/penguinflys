@@ -30,7 +30,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : true # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : "penguinflys" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -96,7 +96,7 @@ analytics:
 author:
   name             : Jie Yuan
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Let's Rock A.I. <br> Penguin is a nickname. <br> Nice to see you here."
+  bio              : "Nice to see you here.<br> Let's Rock A.I. <br> Penguin is a nickname. "
   location         : "Hannover, Germmany"
   email            : 
   links:
@@ -204,7 +204,7 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
   syntax_highlighter: rouge
-
+  math_engine: true
 # Sass/SCSS
 sass:
   sass_dir: _sass
