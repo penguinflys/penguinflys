@@ -2,10 +2,10 @@
 permalink: /about/
 title: "About Me"
 layout: single
-# header:
-#   video:
-#     id: Rj_TkF2gSKw
-#     provider: youtube
+header:
+  video:
+    id: 9dfWzp7rYR4
+    provider: youtube
 toc: true
 toc_sticky: true
 comments: true
@@ -50,7 +50,7 @@ This project is a teaching project which simulates the elevation of earth, and d
 
 {% include video id="Rj_TkF2gSKw" provider="youtube" %}
 
-This is the first project that requires knowledge of SLAM. it is developed in C++ with ROS as a communication tool, PCL and OpenCV as data processing API. It is conducted in a closed aerna with lots of poles and a short tunnel. The examiner set the arena senerio, delevering destination and courier born place randomly, which requires the robustness of method. What I developed is in the last of video, namely SLAM method. The development can be mainly divided into following pieces.
+This is the first project that requires knowledge of SLAM. it is developed in C++ with ROS as a communication tool, PCL and OpenCV as data processing API. It is conducted in a closed arena with lots of poles and a short tunnel. The examiner set the arena scenario, delivering destination and courier born place randomly, which requires the robustness of method. What I developed is in the last of video, namely SLAM method. The development can be mainly divided into following pieces.
 
 <table>
   <thead>
