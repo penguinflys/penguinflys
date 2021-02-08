@@ -15,7 +15,7 @@ author_profile: true
 
 I am a graduate of the [Leibiniz Universität Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Python(for deep learning) and C++(for SLAM) are my principal developing language, and sometimes I use Matlab for fast verification of algorithms.
 
-<!-- I used to be dogmatic, selfish, and ambitious to become someone that can really make a difference, but God has changed me to love others take care of people who I love and give more instead of asking more. In the aspect of personality and psychology, I am a bit like "Bruce" in [7 Up series](https://en.wikipedia.org/wiki/Up_(film_series)). -->
+<!-- I used to be dogmatic, selfish, and ambitious to become someone that can make a difference, but God has changed me to love others take care of people whom I love and give more instead of asking more. In the aspect of personality and psychology, I am a bit like "Bruce" in [7 Up series](https://en.wikipedia.org/wiki/Up_(film_series)). -->
 Please feel free to contact me.
 
 ## Skills
@@ -31,12 +31,12 @@ Here are books that I like reviews a lot during development:
 * [State Estimation for Robotics](http://asrl.utias.utoronto.ca/~tdb/bib/barfoot_ser17.pdf)
 * [Multiple View Geometry in Computer Vision](https://www.amazon.com/Multiple-View-Geometry-Computer-Vision/dp/0521540518)
 * [Deep Learning](https://www.deeplearningbook.org/)
-* [Pattern Recongnition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
+* [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 
 
 ## Projects
 
-The following are some projects that is done as student or student research assistant. Most of those projects are submitted and I cannot open the repository. 
+The following are some projects that is done as student or student research assistant. 
 
 ### Digital Earth based on WMS
 
@@ -44,13 +44,13 @@ The following are some projects that is done as student or student research assi
 *Fig. 0 Visualization of Digital Earth with DEM model*
 {: .text-center}
 
-This project is a teaching project which simulate the elevation of earth, and depth of ocean, it is initialy based on the [icosahedron](https://en.wikipedia.org/wiki/Icosahedron), and iteratively refined in a deeper level to sample the local elevation. it can also simulate the graviety field if the data is in hand.
+This project is a teaching project which simulates the elevation of earth, and depth of ocean, it is initially based on the [icosahedron](https://en.wikipedia.org/wiki/Icosahedron), and iteratively refined in a deeper level to sample the local elevation. it can also simulate the graviety field if the data is in hand.
 
 ### LEGO Courier Student Toy Project
 
 {% include video id="Rj_TkF2gSKw" provider="youtube" %}
 
-This is the first project requires knowledge of SLAM. it is developed in C++ with ROS as basic comunication tool, PCL and OpenCV as mainly processing API. It is conducted in a closed aerna with lots of poles and a short tunnel. The examiner set the arena senerio, delevering destination and courier born place randomly, which requires the robustness of method. What I developed is in the last of video, namely SLAM method. The development can be mainly divided into following pieces.
+This is the first project that requires knowledge of SLAM. it is developed in C++ with ROS as a communication tool, PCL and OpenCV as data processing API. It is conducted in a closed aerna with lots of poles and a short tunnel. The examiner set the arena senerio, delevering destination and courier born place randomly, which requires the robustness of method. What I developed is in the last of video, namely SLAM method. The development can be mainly divided into following pieces.
 
 <table>
   <thead>
