@@ -20,6 +20,9 @@ Hello 🎅🏼🎅🏼
 I am a graduate of the [Leibiniz Universität Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Python(for deep learning) and C++(for SLAM) are my principal developing language, and sometimes I use Matlab for fast verification of algorithms.
 
 <!-- I used to be dogmatic, selfish, and ambitious to become someone that can make a difference, but God has changed me to love others take care of people whom I love and give more instead of asking more. In the aspect of personality and psychology, I am a bit like "Bruce" in [7 Up series](https://en.wikipedia.org/wiki/Up_(film_series)). -->
+
+If you want to know whether a penguin can fly or not, the answer is NO. Video in the head might be the greatest Fools pranks of all time of BBC.
+
 Please feel free to contact me 📧.
 
 ## Skills
@@ -42,19 +45,19 @@ Here are books 📚 that I like reviews a lot during development:
 
 The following are some projects that is done as student or student research assistant. 
 
-### Digital Earth based on WMS
+### Digital Earth based on WMS [link](https://github.com/penguinflys/Oriental_EYE)
 
 ![image-center]({{ "/assets/images/digitalearth.png" | relative_url }}){: .align-center style="width: 100%;"}
 *Fig. 0 Visualization of Digital Earth with DEM model*
 {: .text-center}
 
-This project is a teaching project which simulates the elevation of earth, and depth of ocean, it is initially based on the [icosahedron](https://en.wikipedia.org/wiki/Icosahedron), and iteratively refined in a deeper level to sample the local elevation. it can also simulate the graviety field if the data is in hand.
+This project is a teaching project which simulates the elevation of earth, and depth of the ocean, it is initially based on the [icosahedron](https://en.wikipedia.org/wiki/Icosahedron), and iteratively refined in a deeper level to sample the local elevation. it can also simulate the gravity field if the data is in hand.
 
 ### LEGO Courier Student Toy Project
 
 {% include video id="Rj_TkF2gSKw" provider="youtube" %}
 
-This is the first project that requires knowledge of SLAM. it is developed in C++ with ROS as a communication tool, PCL and OpenCV as data processing API. It is conducted in a closed arena with lots of poles and a short tunnel. The examiner set the arena scenario, delivering destination and courier born place randomly, which requires the robustness of method. What I developed is in the last of video, namely SLAM method. The development can be mainly divided into following pieces.
+This is the first project that requires knowledge of SLAM. it is developed in C++ with ROS as a communication tool, PCL and OpenCV as data processing API. It is conducted in a closed arena with lots of poles and a short tunnel. The examiner set the arena scenario, delivering destination and courier born place randomly, which requires the robustness of the method. What I developed is in the last of the video, namely SLAM method. The development can be mainly divided into the following pieces.
 
 <table>
   <thead>
@@ -85,11 +88,11 @@ This is the first project that requires knowledge of SLAM. it is developed in C+
 
 
 
-* Calibration: The courier has to run in a consistent coordinate system, which means camera and lidar need to be calibrated to global coordinate system. This process is simplified to align all coordiantes to the predefined 2D image coordinate system. Robot coordiante is accesed by a cheesboard fixed in the courier body. LIDAR is calibrated with manual tape measurement. Because the odometry of courier is broken, visual odometry plays an important role.
+* Calibration: The courier has to run in a consistent coordinate system, which means camera and lidar need to be calibrated to global coordinate system. This process is simplified to align all coordinates to the predefined 2D image coordinate system. Robot coordiante is accesed by a cheesboard fixed in the courier body. LIDAR is calibrated with manual tape measurement. Because the odometry of courier is broken, visual odometry plays an important role.
 
-* Localization: Localization from external camera is not accurate, as monocular camera has no scale estimation, although it can be approximated by cheeseboard grid size scale estimation. But it did not perform as thought. Finally, coordinate from camera are simply traingulated with a fixed height parameter. Localization from LIDAR is initialized by coordiantes from camera, but updated with local measurement of similarity transformation prediction via ICP algorithm. The location of the courier is determined by kalman filtering.
+* Localization: Localization from the external camera is not accurate but enough for this scenario. As a monocular camera has no scale estimation, although it can be approximated by cheeseboard grid size scale estimation. But it did not perform as thought. Finally, coordinate from camera are simply triangulated with a fixed height parameter. Localization from LIDAR is initialized by coordinates from camera, but updated with local measurement of similarity transformation prediction via ICP algorithm. The location of the courier is determined by Kalman filtering.
 
-* Mapping: It was not allowed to take any extra ROS packages in this project. I applied 2 dimensional grid map, with a moderate resolution, simply visualized in the OpenCV window, which can also be seen in the video. Besides, a grid map makes path planning easier.
+* Mapping: It was not allowed to take any extra ROS packages in this project. I applied 2-dimensional grid map, with a moderate resolution, simply visualized in the OpenCV window, which can also be seen in the video. Besides, a grid map makes path planning easier.
 
 * Motion Planning: A* algorithm with buffered/cost map.
 
