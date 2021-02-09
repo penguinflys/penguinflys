@@ -15,21 +15,21 @@ author_profile: true
 ## Biography
 
 
-Hello :grin:  
+Hello 🎅🏼🎅🏼
 
 I am a graduate of the [Leibiniz Universität Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Python(for deep learning) and C++(for SLAM) are my principal developing language, and sometimes I use Matlab for fast verification of algorithms.
 
 <!-- I used to be dogmatic, selfish, and ambitious to become someone that can make a difference, but God has changed me to love others take care of people whom I love and give more instead of asking more. In the aspect of personality and psychology, I am a bit like "Bruce" in [7 Up series](https://en.wikipedia.org/wiki/Up_(film_series)). -->
-Please feel free to contact me.
+Please feel free to contact me 📧.
 
 ## Skills
 
-I am fond of cooking. If it is possible to select a second occupation, it must be a cook. I subscribe youtube channels [Chef Wang](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw), [老饭骨](https://www.youtube.com/channel/UCBJmYv3Vf_tKcQr5_qmayXg), and [小高姐的 Magic Ingredients](https://www.youtube.com/channel/UCCKlp1JI9Yg3-cUjKPdD3mw).
+I am fond of cooking👩‍🍳🍚🏺🥠. If it is possible to select a second occupation, it must be a cook. I subscribe youtube channels [Chef Wang](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw), [老饭骨](https://www.youtube.com/channel/UCBJmYv3Vf_tKcQr5_qmayXg), and [小高姐的 Magic Ingredients](https://www.youtube.com/channel/UCCKlp1JI9Yg3-cUjKPdD3mw).
 
 
 ## Technique Books
 
-Here are books that I like reviews a lot during development:
+Here are books 📚 that I like reviews a lot during development:
 
 * [Probabilistic Robotics](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf)
 * [State Estimation for Robotics](http://asrl.utias.utoronto.ca/~tdb/bib/barfoot_ser17.pdf)
