@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Flying Penguin's Log - Home"
+title                    : "Flying Penguin's Log"
 title_separator          : "|"
-subtitle                 : "Swim deeper | Fly higher" # site tagline that appears below site title in masthead
+subtitle                 : "Dive deep" # site tagline that appears below site title in masthead
 name                     :  "Jie Yuan"
 description              : "bling bling, good idea"
 url                      : "https://penguinflys.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
