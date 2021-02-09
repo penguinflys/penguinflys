@@ -4,6 +4,7 @@ title: "About Me"
 layout: single
 header:
   video:
+    width: 70%
     id: 9dfWzp7rYR4
     provider: youtube
 toc: true
