@@ -14,6 +14,9 @@ author_profile: true
 ---
 ## Biography
 
+
+Hello :grin:  
+
 I am a graduate of the [Leibiniz Universität Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Python(for deep learning) and C++(for SLAM) are my principal developing language, and sometimes I use Matlab for fast verification of algorithms.
 
 <!-- I used to be dogmatic, selfish, and ambitious to become someone that can make a difference, but God has changed me to love others take care of people whom I love and give more instead of asking more. In the aspect of personality and psychology, I am a bit like "Bruce" in [7 Up series](https://en.wikipedia.org/wiki/Up_(film_series)). -->
@@ -147,5 +150,6 @@ Trajectory optimization of a car equipped with GPS and IMU sensor. In the convem
 
 ![LIDARMAP]({{ "/assets/images/lidarmap.gif" | relative_url }}){: .align-center style="width: 100%;"}
 
-* Prepare the measurement setup of 2 Lidars and a GPS receiver in a platform with given calibration configration. GPS could be used to locolization but here to syncronize time of devices.
+* Prepare the measurement setup of 2 Lidars and a GPS receiver in a platform with given calibration configuration. GPS could be used to localization but here to synchronize time of devices.
 * Code a ROS package to input velodyne-64 and velodyne-16 raw data, then output calibrated point cloud to map to real-world, car pose is given by Mobile-mapping-system, which has a super high precision on localization.
+
