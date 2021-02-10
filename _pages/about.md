@@ -17,13 +17,13 @@ author_profile: true
 
 Hello 🎅🏼🎅🏼
 
-I am a graduate of the [Leibiniz Universität Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Python(for deep learning) and C++(for SLAM) are my principal developing language, and sometimes I use Matlab for fast verification of algorithms.
+I am a graduate of the [Leibiniz Universität Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Python(for deep learning) and C++(for SLAM) are my principal developing languages, and sometimes I use Matlab for verification of algorithms.
 
 <!-- I used to be dogmatic, selfish, and ambitious to become someone that can make a difference, but God has changed me to love others take care of people whom I love and give more instead of asking more. In the aspect of personality and psychology, I am a bit like "Bruce" in [7 Up series](https://en.wikipedia.org/wiki/Up_(film_series)). -->
 
-If you want to know whether a penguin can fly or not, the answer is NO. Video in the head might be the greatest Fools pranks of all time of BBC.
+If you want to know whether a penguin can really fly or not, the answer is NO, definitely! Video in the head might be the greatest Fools pranks of all time of BBC.
 
-Please feel free to contact me 📧.
+Please feel free to contact me [📧](mailto:yuanjielovejesus@gmail.com).
 
 ## Skills
 
