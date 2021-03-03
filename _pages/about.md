@@ -14,8 +14,7 @@ author_profile: true
 ---
 ## Biography
 
-
-Hello 🎅🏼🎅🏼
+Hello 🎅🏼, my name is Jie Yuan.
 
 I am a graduate of the [Leibiniz Universität Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Python(for deep learning) and C++(for SLAM) are my principal developing languages, and sometimes I use Matlab for verification of algorithms.
 

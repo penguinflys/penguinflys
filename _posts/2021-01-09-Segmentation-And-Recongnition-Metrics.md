@@ -7,6 +7,7 @@ toc_sticky: true
 
 > As discussed in previous Posts, segmentation tasks origins from semantic segmentation and developed to instance segmentation further to panoptic segmentation. In this post, we shall discuss the metrics to various metrics, including IOU, AP, PQ, etc.
 
+SOme changes
 ## Basic Metrics and Definitions
 
 ### Confidence Score
@@ -132,13 +133,13 @@ Panoptic Quality is used to evaluate the performance of the model in Panoptic Se
 \end{align}
 where
 
-|     Paramters    	|                     Description                     	|
-|:----------------:	|:---------------------------------------------------:	|
-|       p,q       	|        prediction and groundtruth of matched __segments__       	|
-|        TP       	| true positive segment, which has $IoU(p,q) > 0.5$ 	|
-|       *      	|                   count of  __segments__, __not pixels__.                   	|
-|    SQ   	|                average IoU of __matched segments__              	|
-| RQ  	|                   F1 score of segments.                   	|
+| Paramters | Description                                        |
+|-----------|----------------------------------------------------|
+| p,q       | prediction and groundtruth of matched __segments__ |
+| TP        | true positive segment, which has $IoU(p,q) > 0.5$  |
+| \|\|      | count of  __segments__, __not pixels__.            |
+| SQ        | average IoU of __matched segments__                |
+| RQ        | F1 score of segments.                              |
 
 
 on the other hand, PQ can also be seen as segmentation quality(SQ) term and recognition quality(RQ)

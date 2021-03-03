@@ -287,3 +287,6 @@ defaults:
       related: true
 
 github: [metadata]
+
+# live reload during making the post.
+livereload: true
