@@ -1,5 +1,6 @@
 ---
 layout: single
+title: Segmentation And Recongnition Metrics
 toc: true
 toc_sticky: true
 ---
@@ -9,6 +10,7 @@ toc_sticky: true
 ## Basic Metrics and Definitions
 
 ### Confidence Score
+
 Confidence score is not exactly a metric to describe the performance of the model. Still, it describes the probability that an anchor box contains object detection or a pixel value belonging to a specific class. It is usually the output of the softmax function from the `classifier`. Confidence score is an important value of classifier saying confidence on prediction, thus is often used to find the most confident detection. However, the corelation between a prediction(what is good?) and confidence score need to be examined, this is often ignored.
 
 Confidence score are usually the output of softmax function, which is described as following:
@@ -75,22 +77,27 @@ Users are usually interested in Precision, which indicates how many detections a
 
 Where $B_p$ is prediction and $B_{gt}$ is ground truth. In pixel-wise segmentation, the intersection and union count pixels of entities. In object detection, it is the object bounding box or bounding circles or any plane geometry that you like.
 
-
 ## Object Detection & Instance Segmentation Metrics
+
 we take average precision(AP), mean average precision(mAP), average recall(AR), mean average recall(mAR) as metrics for Object Detection. We normally set IOU larger than 0.5 as positive instances and positive boxes, axis-aligned and rotated, IOU lower than 0.5 is seen as False Positive. For specific metrics w.r.t IOU, IOU value shall be named.
 
 Average precision (AP) serves as a measure to evaluate the performance of object detectors. It is a single metric that encapsulates precision and recall and summarizes the Precision-Recall curve by averaging precision across recall values from 0 to 1.
 
-
-\begin{align}
-    AP &= \sum(r_n - r_{n-1})p_{interp}(r_n)
-\end{align}
-\begin{align}
-    mAP &= \frac{1}{N}\sum_{n=1}^{N}AP_i
-\end{align}
+\begin{equation}
+    AP^i = \sum_{n=1}^{N_{r}}p_{interp}(r^i_n)
+\end{equation}
+\begin{equation}
+    mAP = \frac{1}{N_{iou}}\sum_{i=0.5}^{1}AP^i
+\end{equation}
 where
 
-$p_{interp}(r_n)$ = $\max_{r^\prime > r_{n}} p(r^\prime)$
+| Notation      | Description                                  |
+|---------------|----------------------------------------------|
+| $r_n^i$ | Recall value under threshold IoU i.|
+|$p_{interp}(r_n)$ | $\max_{r_{n}> r^\prime > r_{n-1}} p(r^\prime)$ meaning the largest precision in interval in $[r_{n-1},r_{n}]$.|
+| $mAP$ | the mean value of AP on different IoU threshold, typically interval is set 0.05.|
+| $N_{r}, N_{iou}$ | the number of recall blocks and iou blocks, typically set as 100 and 11, respectively.|
+
 
 In PASCAL VOC \cite{Everingham2010PascalVOC} Dataset, if multiple detections correspond to 1 ground truth, only 1 detection with the highest score counts as positive, and the remaining counts as FP. Besides, PASCAL takes predictions with IOU larger than 0.5 to calculate AP. However, COCO takes AP's mean value with a different AP threshold interval [0.5,0.05,0.95]. Therefore, COCO not only averages AP over all classes but also on the defined IoU thresholds.
 
@@ -101,10 +108,10 @@ Average recall describes the area doubled under the Recall x IoU curve. The Reca
 \end{equation}
 
 We take metrics mostly from the COCO dataset, which takes metrics in more detail with different settings.
-we take mAP as AP@[.50: .05: .95] as principle metric, and AP with IOU threshold [0.5, 0.75] respectively. considering building with different size, AP and AR is divided to small$[0,32^2]$, medium$[32^2,96^2]$, large$[96^2,\infty)$ w.r.t size of objects.
+we take mAP as AP@[.50: .05: .95] as principle metric, and AP with IOU threshold [0.5, 0.75] respectively. considering building with different size, AP and AR is divided to small $(0,32^2]$, medium $[32^2,96^2]$, large $[96^2,\infty)$ w.r.t size of objects.
 
 For instance Segmentation, the box is replaced with instance polygons and mapped to images as a mask.
-\subsection{Semantic Metrics}
+
 suppose $n_{jj}$ means the number of true positives for class j,$t_j$ total number of classes labeled as class j, $n_{ij}$ false positives,$n_{ji}$ false negatives, metrics can be represented as follows. PA \cref{eq:PA} is the number of correctly classified pixels over all pixels, MPA \cref{eq:MPA} is the averaged number of correctly classified pixels over pixels of a class. MIOU is given in \cref{eq:MIOU} in a more adaptable manner to pixel-wise calculation. FWIoU \cref{eq:FWIoU} is weighted IOU according to the frequency of each class.
 \begin{equation}\label{eq:PA}
     Pixel Accuracy(PA) = \frac{\sum_{j=0}^k{n_{jj}}}{\sum_{j=0}^k t_j}
@@ -118,19 +125,31 @@ suppose $n_{jj}$ means the number of true positives for class j,$t_j$ total numb
 \begin{equation}\label{eq:FWIoU}
     FWIoU = \frac{1}{\sum_{j=0}^k t_j}\sum_{i=0}^k t_j \frac{n_{jj}}{ n_{ij} + n_{ji} + n_{jj}}
 \end{equation}
-\subsection{Panoptic Metrics}
 
 Panoptic Quality is used to evaluate the performance of the model in Panoptic Segmentation tasks.
 \begin{align}
     PQ = \frac{\sum_{p,q \in TP} IoU(p,q)}{|TP| + \frac{1}{2}|FP| + \frac{1}{2}|FN|}
 \end{align}
 where
-\begin{conditions}
-\frac{\sum_{p,q \in TP} IoU(p,q)}{|TP|} & average IOU of matched segments\\
-\frac{1}{2}|FP| + \frac{1}{2}|FN| & penalization of segments without matches
-\end{conditions}
+
+|     Paramters    	|                     Description                     	|
+|:----------------:	|:---------------------------------------------------:	|
+|       p,q       	|        prediction and groundtruth of matched __segments__       	|
+|        TP       	| true positive segment, which has $IoU(p,q) > 0.5$ 	|
+|       *      	|                   count of  __segments__, __not pixels__.                   	|
+|    SQ   	|                average IoU of __matched segments__              	|
+| RQ  	|                   F1 score of segments.                   	|
+
+
 on the other hand, PQ can also be seen as segmentation quality(SQ) term and recognition quality(RQ)
-\begin{align}
-    PQ =  \underbrace{\frac{\sum_{p,q \in TP} IoU(p,q)}{|TP|}}_\text{segmentation quality}\times  \underbrace{\frac{|TP|}{|TP| + \frac{1}{2}|FP| + \frac{1}{2}|FN|}}_\text{recongnition quality}
-\end{align}
+
+\begin{equation}
+    SQ =  \frac{\sum_{p,q \in TP} IoU(p,q)}{|TP|}  
+\end{equation}
+
+\begin{equation}
+    RQ = \frac{|TP|}{|TP| + \frac{1}{2}|FP| + \frac{1}{2}|FN|}
+\end{equation}
 SQ is the average IOU of matched segments, and RQ normally the F1 score. However, RQ and SQ are not independent since SQ is measured only on matched segments.
+
+

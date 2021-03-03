@@ -1,5 +1,6 @@
 ---
 layout: single
+title: Fundamentals In Deep Learning
 toc: true
 toc_sticky: true
 comments: true
