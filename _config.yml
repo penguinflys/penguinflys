@@ -225,7 +225,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jemoji
+  - jekyll-github-metadata
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -289,4 +289,4 @@ defaults:
 github: [metadata]
 
 # live reload during making the post.
-livereload: true
+# livereload: true

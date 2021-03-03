@@ -6,5 +6,6 @@ ruby RUBY_VERSION
 gem "github-pages", group: :jekyll_plugins
 gem "jekyll-include-cache", group: :jekyll_plugins
 
-gem 'jemoji'
-gem 'gemoji'
+# gem "jekyll-github-metadata"
+# gem 'jemoji'
+# gem 'gemoji'

@@ -5,16 +5,15 @@ toc: true
 toc_sticky: true
 ---
 
-> As discussed in previous Posts, segmentation tasks origins from semantic segmentation and developed to instance segmentation further to panoptic segmentation. In this post, we shall discuss the metrics to various metrics, including IOU, AP, PQ, etc.
+> Segmentation tasks origins from semantic segmentation and developed to instance segmentation further to panoptic segmentation. In this post, we shall discuss the metrics to various metrics, including IOU, AP, PQ, etc.
 
-SOme changes
 ## Basic Metrics and Definitions
 
 ### Confidence Score
 
-Confidence score is not exactly a metric to describe the performance of the model. Still, it describes the probability that an anchor box contains object detection or a pixel value belonging to a specific class. It is usually the output of the softmax function from the `classifier`. Confidence score is an important value of classifier saying confidence on prediction, thus is often used to find the most confident detection. However, the corelation between a prediction(what is good?) and confidence score need to be examined, this is often ignored.
+Confidence score is not exactly a metric to describe the performance of the model. Still, it describes the probability that an anchor box contains object or a pixel value belonging to a specific class. It is usually the output of the softmax function from the `classifier`. Confidence score is an important value of classifier saying confidence on prediction, thus is often used to find the most confident detection. However, the corelation between a good prediction(what is good?) and confidence score need to be examined, however, this is often ignored in the research group.
 
-Confidence score are usually the output of softmax function, which is described as following:
+Confidence score are usually the output of softmax function, which is described as following equation:
 
 \begin{equation}
 P(y=j\mid \mathbf {x} )={\frac {e^{\mathbf {x} ^{\mathsf {T}}\mathbf {w} _{j}}}{\sum _{k=1}^{K}e^{\mathbf {x} ^{\mathsf {T}}\mathbf {w} _{k}}}}
@@ -100,7 +99,7 @@ where
 | $N_{r}, N_{iou}$ | the number of recall blocks and iou blocks, typically set as 100 and 11, respectively.|
 
 
-In PASCAL VOC \cite{Everingham2010PascalVOC} Dataset, if multiple detections correspond to 1 ground truth, only 1 detection with the highest score counts as positive, and the remaining counts as FP. Besides, PASCAL takes predictions with IOU larger than 0.5 to calculate AP. However, COCO takes AP's mean value with a different AP threshold interval [0.5,0.05,0.95]. Therefore, COCO not only averages AP over all classes but also on the defined IoU thresholds.
+In [PASCAL VOC](http://host.robots.ox.ac.uk/pascal/VOC/) Dataset, if multiple detections correspond to 1 ground truth, only 1 detection with the highest score counts as positive, and the remaining counts as FP. Besides, PASCAL takes predictions with IOU larger than 0.5 to calculate AP. However, [COCO](https://cocodataset.org/#home) takes AP's mean value with a different AP threshold interval [0.5,0.05,0.95]. Therefore, COCO not only averages AP over all classes but also on the defined IoU thresholds.
 
 Average recall describes the area doubled under the Recall x IoU curve. The Recall x IoU curve plots recall results for each IoU threshold where IoU ∈ [0.5,1.0], with IoU thresholds on the x-axis and recall on the y-axis.
 
@@ -113,11 +112,11 @@ we take mAP as AP@[.50: .05: .95] as principle metric, and AP with IOU threshold
 
 For instance Segmentation, the box is replaced with instance polygons and mapped to images as a mask.
 
-suppose $n_{jj}$ means the number of true positives for class j,$t_j$ total number of classes labeled as class j, $n_{ij}$ false positives,$n_{ji}$ false negatives, metrics can be represented as follows. PA \cref{eq:PA} is the number of correctly classified pixels over all pixels, MPA \cref{eq:MPA} is the averaged number of correctly classified pixels over pixels of a class. MIOU is given in \cref{eq:MIOU} in a more adaptable manner to pixel-wise calculation. FWIoU \cref{eq:FWIoU} is weighted IOU according to the frequency of each class.
-\begin{equation}\label{eq:PA}
+suppose $n_{jj}$ means the number of true positives for class j,$t_j$ total number of classes labeled as class j, $n_{ij}$ false positives,$n_{ji}$ false negatives, metrics can be represented as follows. PA is the number of correctly classified pixels over all pixels, MPA is the averaged number of correctly classified pixels over pixels of a class. MIOU is a more adaptable manner to pixel-wise calculation. FWIoU is weighted IOU according to the frequency of each class.
+\begin{equation}
     Pixel Accuracy(PA) = \frac{\sum_{j=0}^k{n_{jj}}}{\sum_{j=0}^k t_j}
 \end{equation}
-\begin{equation}\label{eq:MPA}
+\begin{equation}
     Mean Pixel Accuracy(MPA) = \frac{1}{k}\sum_{i=0}^k \frac{n_{jj}}{t_j}
 \end{equation}
 \begin{equation}\label{eq:MIOU}
@@ -137,13 +136,14 @@ where
 |-----------|----------------------------------------------------|
 | p,q       | prediction and groundtruth of matched __segments__ |
 | TP        | true positive segment, which has $IoU(p,q) > 0.5$  |
-| \|\|      | count of  __segments__, __not pixels__.            |
+| \|*\|      | count of  __segments__, __not pixels__.           |
 | SQ        | average IoU of __matched segments__                |
 | RQ        | F1 score of segments.                              |
 
-
-on the other hand, PQ can also be seen as segmentation quality(SQ) term and recognition quality(RQ)
-
+On the other hand, PQ can also be seen as multilication of segmentation quality(SQ) and recognition quality(RQ)
+\begin{equation}
+  PQ = SQ \times RQ
+\end{equation}
 \begin{equation}
     SQ =  \frac{\sum_{p,q \in TP} IoU(p,q)}{|TP|}  
 \end{equation}
@@ -153,4 +153,4 @@ on the other hand, PQ can also be seen as segmentation quality(SQ) term and reco
 \end{equation}
 SQ is the average IOU of matched segments, and RQ normally the F1 score. However, RQ and SQ are not independent since SQ is measured only on matched segments.
 
-
+Thank you for reading. Posts related to object detection and instance segmentation will come soon.
