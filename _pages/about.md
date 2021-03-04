@@ -26,7 +26,7 @@ Please feel free to contact me [📧](mailto:yuanjielovejesus@gmail.com).
 
 ## Skills
 
-I am fond of cooking👩‍🍳🍚🏺🥠. If it is possible to select a second occupation, it must be a cook. I subscribe youtube channels [Chef Wang](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw), [老饭骨](https://www.youtube.com/channel/UCBJmYv3Vf_tKcQr5_qmayXg), and [小高姐的 Magic Ingredients](https://www.youtube.com/channel/UCCKlp1JI9Yg3-cUjKPdD3mw).
+I am fond of cooking 👩‍🍳🍚🏺🥠. If it is possible to select a second occupation, it must be a cook. I subscribe youtube channels [Chef Wang](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw), [老饭骨](https://www.youtube.com/channel/UCBJmYv3Vf_tKcQr5_qmayXg), and [小高姐的 Magic Ingredients](https://www.youtube.com/channel/UCCKlp1JI9Yg3-cUjKPdD3mw).
 
 
 ## Technique Books
@@ -51,6 +51,8 @@ The following are some projects that is done as student or student research assi
 {: .text-center}
 
 This project is a teaching project which simulates the elevation of earth, and depth of the ocean, it is initially based on the [icosahedron](https://en.wikipedia.org/wiki/Icosahedron), and iteratively refined in a deeper level to sample the local elevation. it can also simulate the gravity field if the data is in hand.
+
+Techniques: OpenGL, C++, Geographic Grid.
 
 ### LEGO Courier Student Toy Project
 
@@ -97,12 +99,7 @@ This is the first project that requires knowledge of SLAM. it is developed in C+
 
 * Control: Iteration of going and turning.
 
-
-
-
-
-
-
+Techniques: C++, ROS, SLAM, Image Processing, LIDAR Processing.
 
 ### Dynamic Landmark based Visual Odometry(SFM)
 
@@ -116,6 +113,8 @@ This is a classic project,
 * Filter false matching points via stero matching in RANSAC framework.
 * 3D motion estimation with frame-to-frame matching.
 * Map and motion reconstruction, performance estimation(accuracy, efficiency) and model selection.
+
+Tequniques: C++, Visual Odometry, Scene Reconstruction.
 
 ### Object Tracking and Motion Prediction via KFs.
 
@@ -136,6 +135,8 @@ Task:
 * ASM matching and object localization, and object matching.
 * Kalman Filtering(KF) vs EFK vs UFK w.r.t efficiency and accuracy.
 
+Techniques: Python, Object tracking, Kalman Filtering, Motion Estimation.
+
 ### Trajectory Estimation with GPS + IMU based on Set-membership Kalman Filtering
 
 ![image-center]({{ "/assets/images/ikg_s4.jpg" | relative_url }}){: .align-center style="width: 100%;"}
@@ -145,8 +146,9 @@ Task:
 
 Based on Paper: [Geo-Referencing of a Multi-Sensor System Based on Set-Membership Kalman Filter](https://www.researchgate.net/publication/327489443_Geo-Referencing_of_a_Multi-Sensor_System_Based_on_Set-Membership_Kalman_Filter).
 
-Trajectory optimization of a car equipped with GPS and IMU sensor. In the convemtional filtering method, object is seen as a rigid body, and thus motion estimation are reduced as similarity transformation. However non-rigid objects also need motion estimation such as fluids in ballon, which trasforms itself when water pressure changes. Uncertainty is seen as **ellipsoid space** surrounded with probabilistic distribution. The application here are seen as a generalization test on normal filtering seneriao.
+Trajectory optimization of a car equipped with GPS and IMU sensor. In the conventional filtering method, object is seen as a rigid body, and thus motion estimation are reduced as similarity transformation. However non-rigid objects also need motion estimation such as fluids in ballon, which trasforms itself when water pressure changes. Uncertainty is seen as **ellipsoid space** surrounded with probabilistic distribution. The application here are seen as a generalization test on normal filtering seneriao.
 
+Techniques: Filtering
 
 ### Real-time HD Map Calibration with Multiple Lidars
 
@@ -155,3 +157,4 @@ Trajectory optimization of a car equipped with GPS and IMU sensor. In the convem
 * Prepare the measurement setup of 2 Lidars and a GPS receiver in a platform with given calibration configuration. GPS could be used to localization but here to synchronize time of devices.
 * Code a ROS package to input velodyne-64 and velodyne-16 raw data, then output calibrated point cloud to map to real-world, car pose is given by Mobile-mapping-system, which has a super high precision on localization.
 
+Techniques: C++, ROS, Calibration.
