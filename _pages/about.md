@@ -114,7 +114,7 @@ This is a classic project,
 * 3D motion estimation with frame-to-frame matching.
 * Map and motion reconstruction, performance estimation(accuracy, efficiency) and model selection.
 
-Tequniques: C++, Visual Odometry, Scene Reconstruction.
+Techniques: C++, Visual Odometry, Scene Reconstruction.
 
 ### Object Tracking and Motion Prediction via KFs.
 
@@ -135,7 +135,7 @@ Task:
 * ASM matching and object localization, and object matching.
 * Kalman Filtering(KF) vs EFK vs UFK w.r.t efficiency and accuracy.
 
-Techniques: Python, Object tracking, Kalman Filtering, Motion Estimation.
+Techniques: Python, Object Tracking, Kalman Filtering, Motion Estimation.
 
 ### Trajectory Estimation with GPS + IMU based on Set-membership Kalman Filtering
 
@@ -157,4 +157,4 @@ Techniques: Filtering
 * Prepare the measurement setup of 2 Lidars and a GPS receiver in a platform with given calibration configuration. GPS could be used to localization but here to synchronize time of devices.
 * Code a ROS package to input velodyne-64 and velodyne-16 raw data, then output calibrated point cloud to map to real-world, car pose is given by Mobile-mapping-system, which has a super high precision on localization.
 
-Techniques: C++, ROS, Calibration.
+Techniques: C++, ROS, Sensor Calibration.
