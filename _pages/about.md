@@ -16,7 +16,7 @@ author_profile: true
 
 Hello 🎅🏼, my name is Jie Yuan. Welcome to my site.
 
-I am a graduate of the [Leibiniz Universität Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Python(for deep learning) and C++(for SLAM) are my principal developing languages, and sometimes I use Matlab for verification of algorithms.
+I am a graduate of the [Leibniz University Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Python(for deep learning) and C++(for SLAM) are my principal developing languages, and sometimes I use Matlab for verification of algorithms.
 
 <!-- I used to be dogmatic, selfish, and ambitious to become someone that can make a difference, but God has changed me to love others take care of people whom I love and give more instead of asking more. In the aspect of personality and psychology, I am a bit like "Bruce" in [7 Up series](https://en.wikipedia.org/wiki/Up_(film_series)). -->
 
@@ -109,7 +109,7 @@ Techniques: C++, ROS, SLAM, Image Processing, LIDAR Processing.
 {: .text-center}
 
 This is a classic project, 
-* Extreact feature points with multiple methods, such as SIFT, Harris, SURF, ORB,FREAK, BRISK, etc.
+* Extract feature points with multiple methods, such as SIFT, Harris, SURF, ORB,FREAK, BRISK, etc.
 * Filter false matching points via stero matching in RANSAC framework.
 * 3D motion estimation with frame-to-frame matching.
 * Map and motion reconstruction, performance estimation(accuracy, efficiency) and model selection.
