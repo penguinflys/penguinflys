@@ -1,6 +1,10 @@
 /* ==========================================================================
    Variables
    ========================================================================== */
+/*
+   Fonts
+   ========================================================================== */
+@import "minimal-mistakes/fonts";
 
 /*
    Typography
@@ -17,10 +21,14 @@ $serif: Georgia, Times, serif !default;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+$segoe-ui: "Segoe UI" !default;
 
 /* sans serif typefaces */
 $sans-serif-narrow: $sans-serif !default;
 $helvetica: Helvetica, "Helvetica Neue", Arial, sans-serif !default;
+$noto-sans: "Noto Sans" !default;
+$open-sans: "Open Sans" !default;
+$roboto: "Roboto" !default;
 
 /* serif typefaces */
 $georgia: Georgia, serif !default;
@@ -29,7 +37,7 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $sans-serif !default;
+$global-font-family: $roboto !default;
 $header-font-family: $sans-serif !default;
 $caption-font-family: $serif !default;
 
@@ -152,8 +160,8 @@ $max-width: $x-large !default;
    ========================================================================== */
 
 $right-sidebar-width-narrow: 200px !default;
-$right-sidebar-width: 300px !default;
-$right-sidebar-width-wide: 400px !default;
+$right-sidebar-width: 230px !default;
+$right-sidebar-width-wide: 300px !default;
 
 /*
    Other

@@ -3,6 +3,7 @@ layout: single
 toc: true
 toc_sticky: true
 references: bibliography.bib
+# classes: wide
 ---
 
 > Uncertainty happens during observation in the real world. Robotics observe the world using sensors, and the uncertainty of sensors is modelled by probabilistic models, such as gaussian distribution. 
@@ -36,7 +37,9 @@ However, the new robot systems operates in a increasingly unstructured environme
 ## Probabilistic Model
 * <span style="color:blue">How to model the uncertainty?</span>  
 
-They key idea of probabilistic robotics is to represent uncertainty explicitly, using the calculus of probability theory. Instead of find the best guess of what happens in the real world, the probabilistic model represent the information by probability distribution over the space of possible hypothesis. With this model, all sources of uncertainty can be fused mathematically, detailed information shall be mentioned later in other posts
+The key idea of probabilistic robotics is to represent uncertainty explicitly, using the calculus of probability theory. Instead of find the best guess of what happens in the real world, the probabilistic model represent the information by probability distribution over the space of possible hypothesis. With this model, all sources of uncertainty can be fused mathematically, detailed information shall be mentioned later in later posts, such as kalman filtering.
+
+<span style="color:red"> The most important mindset of applying probabilistic model is that the scalars describing the state of the environment is extended to probabilistic space, instead of being a number.</span>
 ## References
 
 <div id="refs"></div>

@@ -11,6 +11,7 @@ toc: true
 toc_sticky: true
 comments: true
 author_profile: true
+# classes: wide
 ---
 ## Biography
 
