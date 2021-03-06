@@ -2,8 +2,6 @@
 layout: single
 toc: true
 toc_sticky: true
-references: bibliography.bib
-# classes: wide
 ---
 
 > Uncertainty happens during observation in the real world. Robotics observe the world using sensors, and the uncertainty of sensors is modelled by probabilistic models, such as gaussian distribution. 

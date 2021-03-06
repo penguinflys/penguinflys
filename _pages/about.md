@@ -11,7 +11,6 @@ toc: true
 toc_sticky: true
 comments: true
 author_profile: true
-# classes: wide
 ---
 ## Biography
 
@@ -151,11 +150,47 @@ Trajectory optimization of a car equipped with GPS and IMU sensor. In the conven
 
 Techniques: Filtering
 
-### Real-time HD Map Calibration with Multiple Lidars
+### Real-time HD Map Calibration with Multiple Lidar
 
 ![LIDARMAP]({{ "/assets/images/lidarmap.gif" | relative_url }}){: .align-center style="width: 100%;"}
 
-* Prepare the measurement setup of 2 Lidars and a GPS receiver in a platform with given calibration configuration. GPS could be used to localization but here to synchronize time of devices.
+* Prepare the measurement setup of 2 Lidar and a GPS receiver in a platform with given calibration configuration. GPS could be used to localization but here to synchronize time of devices.
 * Code a ROS package to input velodyne-64 and velodyne-16 raw data, then output calibrated point cloud to map to real-world, car pose is given by Mobile-mapping-system, which has a super high precision on localization.
 
 Techniques: C++, ROS, Sensor Calibration.
+
+### PanUrban Dataset - a panoptic dataset of aerial images([link]({{"assets/files/Master_Thesis_Presentation.pdf" | relative_url}}))
+
+PanUrban Dataset is a dataset which takes car and building as things and trees impervious surface etc. as stuff, locating on the city region of Vaihingen and Potsdam. This datasets will be given to public in short time.
+
+| Vaihingen sample |  Potsdam sample |
+:-------------------------:|:-------------------------:
+![Vaihingen]({{"assets/images/DenseBuilding_Potsdam.png" | relative_url}})  |  ![Potsdam]({{"assets/images/DenseBuilding_Vaihingen.png"| relative_url}})
+
+Fig. Blue footprint encloses building instance, yellow footprint encloses car instance.
+
+| Apartment | Factory | Innercity | Parking | Residual |
+|:---------:|:---------:|:--------:|:-------:|:-------:|
+|![img]({{"assets/images/samples/apartment.jpg" | relative_url }})|![img]({{"assets/images/samples/factory.jpg" | relative_url }})|![img]({{"assets/images/samples/innercity.jpg" | relative_url }})|![img]({{"assets/images/samples/parking.jpg" | relative_url }})|![img]({{"assets/images/samples/residual.jpg" | relative_url }})|
+|![img]({{"assets/images/samples/apartment.png" | relative_url }})|![img]({{"assets/images/samples/factory.png" | relative_url }})|![img]({{"assets/images/samples/innercity.png" | relative_url }})|![img]({{"assets/images/samples/parking.png" | relative_url }})|![img]({{"assets/images/samples/residual.png" | relative_url }})|
+
+Fig. Samples cross different city areas.
+
+This dataset has following properties:
+
+* **Orthophoto**: Aerial Image dataset based on **orthogonal**([link](https://en.wikipedia.org/wiki/Orthophoto)) images with geospatial information, which can be directly used on measurement.
+* **Multiple Tasks**: allows task for object detection, instance segmentation, semantic segmentation, and panoptic segmentation.
+* **Adjacent Buildings**: unlike some dataset such as crowdAI, most buildings in our dataset are adjacent to its neighbors, in other words, it is __dense distributed__. thanks to development of Instance Segmentation, the task to distinguish connected buildings is now possible.
+* **Full Range Augmentation**: utilize features across source blocks in order to extract more robust features.
+
+### Panoptic Segmentation on PanUrban dataset
+
+Take [PanopticFPN](https://arxiv.org/abs/1901.02446) as an example model on PanUrban Dataset, with either rotated bounding box or axis-aligned bounding box.
+
+
+| Panoptic Result | Semantic Label | Instance Label | Source Image |
+|:-----------------:|:----------------:|:----------------:|:--------------:|
+|![img]({{"assets/images/pred_samples/resarea2_Hameln0_pred.jpg" | relative_url }})|![img]({{"assets/images/pred_samples/resarea2_Hameln0_sem.png" | relative_url }})|![img]({{"assets/images/pred_samples/resarea2_Hameln0_gt.jpg" | relative_url }})|![img]({{"assets/images/pred_samples/resarea2_Hameln0_src.jpg" | relative_url }})|
+|![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_pred.jpg" | relative_url }}) |![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_sem.png" | relative_url }})|![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_gt.jpg" | relative_url }})|![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_src.png" | relative_url }})|
+
+Fig. Visualization of PanUrban dataset Prediction
