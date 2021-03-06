@@ -7,6 +7,9 @@ main:
     url: /about
   - title: "RESUME"
     url: /assets/resume/Software_Engineer_Resume.pdf
+  
+  - title: "Reading"
+    
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
