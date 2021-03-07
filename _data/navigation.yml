@@ -8,7 +8,7 @@ main:
   - title: "RESUME"
     url: /assets/resume/Software_Engineer_Resume.pdf
   
-  - title: "Reading"
+  # - title: "Reading"
     
   # - title: "Sample Posts"
   #   url: /year-archive/
