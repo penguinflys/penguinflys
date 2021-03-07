@@ -3,10 +3,15 @@ permalink: /about/
 title: "About Me"
 layout: single
 header:
-  video:
-    width: 70%
-    id: 9dfWzp7rYR4
-    provider: youtube
+  overlay_image: assets/utils/tree.gif
+  # video:
+  #   width: 70%
+  #   id: 9dfWzp7rYR4
+  #   provider: youtube
+  caption: "Photo credit: [**Tenor**](https://tenor.com/search/animated-van-gogh-gifs)"
+excerpt: >
+  The kingdom of heaven is like treasure hidden in a field. <br /> When a man found it, he hid it again, <br /> and then in his joy went and sold all he had and bought that field.<br />
+  - Matthew 13:44
 toc: true
 toc_sticky: true
 comments: true

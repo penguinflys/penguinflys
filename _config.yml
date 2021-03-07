@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name             : Jie Yuan
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "assets/utils/giphy.gif" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Nice to see you here. <br> Penguin is a nickname. "
   location         : "Hannover, Germmany"
   email            : 
