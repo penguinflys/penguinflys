@@ -111,6 +111,7 @@
 }
 
 .sidebar__top {
+  @include transition;
   position: fixed;
   background: transparent;
   border: none;
@@ -119,13 +120,27 @@
   bottom: 25px;
   right: 10px;
   cursor: pointer;
+  display: inline-block;
   &:hover,
   &:focus {
     transform: translateY(-10px);
   }
+
   img {
     width: 100%;
   }
+}
+
+.waypoint {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: opacity 0.6s cubic-bezier(0.694, 0, 0.335, 1),
+    transform 0.6s cubic-bezier(0.694, 0, 0.335, 1);
+}
+
+.in-view {
+  opacity: 1;
+  transform: translateZ(0);
 }
 
 /*
