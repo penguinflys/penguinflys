@@ -63,7 +63,7 @@ Techniques: OpenGL, C++, Geographic Grid.
 
 ### LEGO Courier Student Toy Project
 
-{% include video id="Rj_TkF2gSKw" provider="youtube" %}
+{% include video id="Rj_TkF2gSKw?start=60" provider="youtube" %}
 
 This is the first project that requires knowledge of SLAM. it is developed in C++ with ROS as a communication tool, PCL and OpenCV as data processing API. It is conducted in a closed arena with lots of poles and a short tunnel. The examiner set the arena scenario, delivering destination and courier born place randomly, which requires the robustness of the method. What I developed is in the last of the video, namely SLAM method. The development can be mainly divided into the following pieces.
 
