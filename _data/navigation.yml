@@ -13,11 +13,11 @@ main:
   # - title: "Reading"
   - title: ARCHIVE
     sublinks:
-      - title: By Tag
+      - title: BY TAG
         url: /tags/
-      - title: By Category
+      - title: BY CATEGORY
         url: /categories/
-      - title: By Year
+      - title: BY YEAR
         url: /year-archive/
   - title: "ABOUT ME"
     # url: https://mmistakes.github.io/minimal-mistakes/about/
