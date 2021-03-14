@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 locale                   : "en-US"
 title                    : "Flying Penguin's Log"
 title_separator          : "|"
-subtitle                 : "Dive deep" # site tagline that appears below site title in masthead
+subtitle                 : "A humble Robotic Developer dive deep to learn" # site tagline that appears below site title in masthead
 name                     :  "Jie Yuan"
 description              : "bling bling, good idea"
 url                      : "https://penguinflys.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -52,9 +52,9 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
+search                   : true # true, false (default)
 search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search_provider          : google  # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -96,7 +96,7 @@ analytics:
 author:
   name             : Jie Yuan
   avatar           : "assets/utils/giphy.gif" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Nice to see you here. <br> Penguin is a nickname. "
+  bio              : "Nice to see you here. <br> Penguin is my nickname. "
   location         : "Hannover, Germmany"
   email            : 
   links:
@@ -226,6 +226,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-github-metadata
+  - jekyll-menus
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate

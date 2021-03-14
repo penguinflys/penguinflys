@@ -2,17 +2,23 @@
 main:
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "RESUME"
+    url: 
+    sublinks:
+      - title: "CHINESE"
+        url: /assets/resume/Software_Engineer_Resume__Chinese_.pdf
+      - title: "ENGLISH"
+        url: /assets/resume/Software_Engineer_Resume__English_.pdf
+
+  # - title: "Reading"
+  - title: ARCHIVE
+    sublinks:
+      - title: By Tag
+        url: /tags/
+      - title: By Category
+        url: /categories/
+      - title: By Year
+        url: /year-archive/
   - title: "ABOUT ME"
     # url: https://mmistakes.github.io/minimal-mistakes/about/
     url: /about
-  - title: "RESUME"
-    url: /assets/resume/Software_Engineer_Resume.pdf
-  
-  # - title: "Reading"
-    
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
