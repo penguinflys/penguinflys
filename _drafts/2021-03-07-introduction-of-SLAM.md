@@ -7,6 +7,10 @@ header:
 excerpt: >
     A flexible two-column Jekyll theme. Perfect for building personal sites, blogs, and portfolios.<br />
     <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.21.0">Latest release v4.21.0</a></small>
+categories:
+  - Fundamental
+tags:
+  - SLAM
 ---
 
 > This post contains the basic logic of SLAM, and the difference with SFM and Odometry.

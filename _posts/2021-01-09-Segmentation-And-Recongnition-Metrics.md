@@ -3,6 +3,13 @@ layout: single
 title: Segmentation And Recongnition Metrics
 toc: true
 toc_sticky: true
+categories:
+  - Fundamental
+tags:
+  - Object Detection
+  - Instance Segmentation
+  - Panoptic Segmentation
+  - Semantic Segmentation
 ---
 
 > Segmentation tasks origins from semantic segmentation and developed to instance segmentation further to panoptic segmentation. In this post, we shall discuss the metrics to various metrics, including IOU, AP, PQ, etc.
