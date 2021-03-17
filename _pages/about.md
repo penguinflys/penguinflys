@@ -129,7 +129,7 @@ Senerio is the same as the last project, but this task is oriented to trajectory
 ![image-center]({{ "/assets/images/ukf-highway-projected.gif" | relative_url }}){: .align-center}
 
 
-*Fig. 2 Visualization of prediction of prededing cars, source: [udacity](https://github.com/penguinflys/UdacitySensorFusion/tree/master/final_proj_uncented_kalman_filter_traffic_flow_tracking)*
+*Fig. Visualization of prediction of prededing cars, source: [udacity](https://github.com/penguinflys/UdacitySensorFusion/tree/master/final_proj_uncented_kalman_filter_traffic_flow_tracking)*
 {: .text-center}
 
 Given: 
