@@ -20,7 +20,7 @@ Bayesian theory is firstly introduced and then followed by the functional descri
 In SLAM and state machine:
 
 $$
-P(X|Z) = \frac{P(Z|X)P(X)}{P(Z)} = \frac{P(Z|X)P(X)}{\sum_{i}P(Z|x_i)P(x_i)} \\ \Rightarrow \underbrace{P(X|Z)}_{\substack{Posterior}} \propto \underbrace{P(Z|X)}_{\substack{Likelihood}} \underbrace{P(X)}_{\substack{Prior}}
+P(X|Z) = \frac{P(Z|X)P(X)}{P(Z)} = \frac{P(Z|X)P(X)}{\sum_{i}P(Z|x_i)P(x_i)} \\ \Rightarrow \underbrace{P(X|Z)}_{\text{Posterior}} \propto \underbrace{P(Z|X)}_{\text{Likelihood}} \underbrace{P(X)}_{\text{Prior}}
 $$
 
 Where $Z$ is the __observation__ or __input feature__, the set of all possible observation which forms the observation space or feature space. If you take a sample from $Z$, this sample shall denoted as $z$. 
@@ -73,6 +73,10 @@ In above case, P(\mu|x) = $N(\mu|\mu_{post}, \sigma_{post}^2)$ with $\mu_{post} 
 Analytical from is not always the available, gaussian in the example is a special case. Generally we are interested in certain quantities such as __expectation of a function__ with variable in the probability distribution or __Maximum a posteriori (MAP) estimation__, However, because of unknown prior density of $p(x)$, it is usually approximated by
 
 $$
+E[f] = \int f(x)p(x)dx
+$$
+
+$$
 E[\hat{f}] \approx \frac{1}{m} \sum_{j=1}^{m}f(x_{j}) \text{   with  }  x_j \sim p(x)
 $$
 
@@ -108,18 +112,112 @@ __Limitation__:
 
 
 ### Accept-Reject Method
+We want to sample from $p(x)$, as we don't know the form of $p(x)$, we add another dimension for sampling namely $U$, with $U$ aligned to probabilistic space of $p(x)$, then:
+
+$$X \sim p(x) 	\iff  (X,U) \sim Uniform \{(x,u) | 0<u<p(x) \} $$
+
+The sampling process in $X \in [a,b]$ with unknown p(x) is converted to __uniform__ sampling from $X \in [a,b]$ with and $U \in [0,1]$. Counting accepted samples to $X$ space can reproduce the $p(x)$, and the acceptance criterion is $0<u<p(x)$.
+
+![image-center]({{ "/assets/images/MCMC/acceptreject.PNG" | relative_url }}){: .align-center}
+
+*Fig. Accept Reject example, red dots is rejected and green are accepted, source: Claus Brenner*
+{: .text-center}
+
+__Limitation__: 
+* Efficiency depends on the probability of acceptance(comparison on area size), to improve the efficiency you may replace the extra uniform distribution of $U$ to other distributions such as gaussian, but it has to enclose the area of $p(x)$, what has to be mentioned is that sampling on $U$ has to be uniform, because you want to accumulate the samples in this dimension.
+* > For log-concave functions, the algorithm can be extended so that the instrumental density is iteratively adjusted and adapted to the density of f. (See Robert & Casella.)
+
+* Distributions with high dimensionality is hard to find a proper density function $q(x)$.
 
 ### Importance Sampling
+This method is used for —__computing expected value__, however, drawing samples subjected to $p(x)$ cannot be achieved easily.
+
+$$
+E[f] = \int f(x)p(x)dx 
+     = \int f(x)\frac{p(x)}{q(x)} q(x) dx \\
+     = \int \underbrace{f(x)\frac{p(x)}{q(x)}}_{\text{Approximation Function}} \underbrace{q(x)}_{\text{Instrumental Density}} dx
+$$
+
+Then the calculation can be approximated:
+
+$$
+E[\hat{f}] \approx \frac{1}{m} \sum_{j=1}^{m}f(x_{j})\underbrace{\frac{p(x_j)}{q(x_j)}}_{\text{Weight/Importance}} \text{   with  }  x_j \sim q(x)
+$$
+
+As an instrumental density, you know the analytical form of $q(x)$ and you can take samples from it. On the other hand, you have $p(x)$ in unknown form, but given lots of samples of $x$, you can approximate $p(x_j)$
+
+__Limitation__: 
+* the choice of $ q(x) $ influences the convergence properties 
 
 ### Gradient ascent(only MAP)
+This method is used for __computing local maxima__, however, drawing samples subjected to $p(x)$ cannot be achieved easily.
 
-### MCMC
+* Start with an arbitrary camera location
+* Evaluate the target function
+* Propose a random step (random length and direction)
+* Evaluate the target function there as well
+* Accept if the value increases.
 
+This is the most normal way, and shall not be introduced.
+
+__Limitation__: 
+* Only local maxima can be achieved.
+
+## MCMC(Markov Chain Monte Carlo)
+
+### What is MCMC
+
+As we can see from the name, MCMC consists of two MCs, namely Monte Carlo Simulation (MC) and Markov Chain (also referred to as MC). To understand the principle of MCMC we must first figure out the principle of Monte Carlo method and Markov chain. The MCMC method is used to estimate the posterior distribution of the parameter of interest by random sampling in probability space.
+
+#### Monte Carlo
+Monte Carlo is the method to approximate the value with simulation, for example you want the the value of $\pi$, and you can take samples from a square and count samples in the circle. As introduced in the above section, directly sampling from p(x) can be hard, $\theta$ is our target value, such as expectation. Following the the normal format of Monte Carlo with Importance sampling:
+
+$$
+\theta = \int_a^b f(x)dx =  \int_a^b \frac{f(x)}{p(x)}p(x)dx \approx \frac{1}{n}\sum\limits_{i=0}^{n-1}\frac{f(x_i)}{p(x_i)}
+$$
+
+#### Markov Chain
+
+Markov property:
+
+$$
+P(X_{t+1} |...X_{t-2}, X_{t-1}, X_{t} ) = P(X_{t+1} | X_{t})
+$$
+
+Following is a markov chain with transition matrix:
+
+$$
+T=\left( \begin{array}{ccc} 0.9&0.075&0.025 \\ 0.15&0.8& 0.05 \\ 0.25&0.25&0.5 \end{array} \right)
+$$
+
+![image-center]({{ "/assets/images/MCMC/chain.PNG" | relative_url }}){: .align-center}
+
+*Fig. Markov Chain Model, source: Wiki*
+{: .text-center}
+
+
+Set a random node as a start denoted as $X_1$, and after a while of transition until $X_n$, you can find that $\lim_{n \to \infty}P_{ij}^n$ in each colom remains the same.
+
+![image-center]({{ "/assets/images/MCMC/process.PNG" | relative_url }}){: .align-center}
+
+*Fig. Random Walking Process, source: Wiki*
+{: .text-center}
+
+
+$$
+T=\left( \begin{array}{ccc} 0.625&0.3125&0.0625 \\ 0.625&0.3125&0.0625 \\ 0.625&0.3125&0.0625 \end{array} \right)
+$$
+
+MCMC usually samples from stationary distribution, and sampling algorithms is listed below but not put in scope in this post.
 ### Metropolis-Hastings
-
+Please refer [link](https://en.wikipedia.org/wiki/Metropolis%E2%80%93Hastings_algorithm)
 ### Gibbs
 
+Please refer [link](https://en.wikipedia.org/wiki/Gibbs_sampling)
+
 ### reversible jump MCMC
+
+Please refer [link](https://en.wikipedia.org/wiki/Reversible-jump_Markov_chain_Monte_Carlo)
 
 <!-- <span style="color:blue"> What is Markov Decision Process(MDP)? </span>
 
