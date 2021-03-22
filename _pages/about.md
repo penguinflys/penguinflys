@@ -25,6 +25,18 @@ I am a graduate of the [Leibniz University Hannover](https://www.uni-hannover.de
 
 <!-- I used to be dogmatic, selfish, and ambitious to become someone that can make a difference, but God has changed me to love others take care of people whom I love and give more instead of asking more. In the aspect of personality and psychology, I am a bit like "Bruce" in [7 Up series](https://en.wikipedia.org/wiki/Up_(film_series)). -->
 
+I focus on developing multi-sensor (camera, radar, IMU, GPS) perception and filter-based multi-sensor fusion localization for mobile robots. In addition, deep learning based scene understanding and reinforcement learning for automatic control is also a focus of my study. My university is both a production and a learning process - working in teams to produce programs that are ready for practical application and sale, the relevant areas are listed below.
+
+* __HD Mapping__
+* __Robot Localization__
+* __Robot Motion Planning__
+* __3D Scene Simulation__
+* __Object Tracking__
+* __Sensor Calibration__
+* __Image Annotation__
+* __Scene Segmentation__
+
+
 If you want to know whether a penguin can really fly or not, the answer is NO, definitely! Following video might be the greatest Fools pranks of all time of BBC.
 
 {% include video id="9dfWzp7rYR4" provider="youtube" %}
