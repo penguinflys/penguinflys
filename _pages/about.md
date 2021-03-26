@@ -21,11 +21,11 @@ author_profile: true
 
 Hello 🎅🏼, my name is Jie Yuan. Welcome to my site.
 
-I am a graduate of the [Leibniz University Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in deep learning(DL) application in mobile robotics and Simultaneous Localization and Mapping(SLAM). Python(for deep learning) and C++(for SLAM) are my principal developing languages, and sometimes I use Matlab for verification of algorithms.
+I am a graduate of the [Leibniz University Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in Simultaneous Localization and Mapping(SLAM) and Computer Vision based on Deep Learning. Python(for deep learning) and C++(for SLAM) are my principal developing languages, and sometimes I use Matlab for verification of algorithms.
 
 <!-- I used to be dogmatic, selfish, and ambitious to become someone that can make a difference, but God has changed me to love others take care of people whom I love and give more instead of asking more. In the aspect of personality and psychology, I am a bit like "Bruce" in [7 Up series](https://en.wikipedia.org/wiki/Up_(film_series)). -->
 
-I focus on developing multi-sensor (camera, radar, IMU, GPS) perception and filter-based multi-sensor fusion localization for mobile robots. In addition, deep learning based scene understanding and reinforcement learning for automatic control is also a focus of my study. My university is both a production and a learning process - working in teams to produce programs that are ready for practical application and sale, the relevant areas are listed below.
+I develop multi-sensor (camera, radar, IMU, GPS) perception and filter-based localization for mobile robotic. In addition, deep learning based scene understanding and reinforcement learning for automatic control is also a main concern in my study. My university is both a production and a learning process - working in teams to produce programs that are ready for practical application and sale, the relevant areas are listed below.
 
 * __HD Mapping__
 * __Robot Localization__
