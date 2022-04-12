@@ -21,29 +21,26 @@ author_profile: true
 
 Hello 🎅🏼, my name is Jie Yuan. Welcome to my site.
 
-I am a graduate of the [Leibniz University Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in Simultaneous Localization and Mapping(SLAM) and Computer Vision based on Deep Learning. Python(for deep learning) and C++(for SLAM) are my principal developing languages, and sometimes I use Matlab to verify algorithms.
+I am a graduate of the [Leibniz University Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in Simultaneous Localization and Mapping(SLAM) and Computer Vision based on Deep Learning. Python (for DL) and C++ (for SLAM) are my principal developing languages, sometimes I use Matlab to verify algorithms.
 
-I develop multi-sensor (camera, radar, IMU, GPS) perception and filter-based localization for mobile robotic. Besides, deep-learning-based scene understanding and reinforcement learning for automatic control is also a primary concern in my study. My university is both a production and a learning process - working in teams to produce practical applications supporting autonomous driving. The relevant areas are listed below.
+I develop multi-sensor (camera, radar, IMU, GPS) perception and filter-based localization for mobile robotic. Besides, deep-learning-based scene understanding and reinforcement learning for automatic control is also a major in my study. My study program is combines production and learning - working in teams to produce practical applications supporting autonomous driving while applying fresh knowledge from study. My relevant areas are listed as following.
 
 * __HD Mapping__
-* __Robot Localization__
-* __Robot Motion Planning__
-* __3D Scene Simulation__
-* __Object Tracking__
-* __Sensor Calibration__
-* __Image Annotation__
 * __Scene Segmentation__
+* __Object Tracking__
+* __Robotic Localization__
+* __Robotic Perception__
 
 
-If you want to know whether a penguin can fly or not, the answer is NO! Following video might be the greatest Fools pranks of all time of BBC.
+<!-- If you want to know whether a penguin can fly or not, the answer is NO! Following video might be the greatest Fools pranks of all time of BBC.
 
-{% include video id="9dfWzp7rYR4" provider="youtube" %}
+{% include video id="9dfWzp7rYR4" provider="youtube" %} -->
 
 Please feel free to contact me [📧](mailto:yuanjielovejesus@gmail.com).
 
-## Skills
+<!-- ## Skills
 
-I am fond of cooking 👩‍🍳🍚🏺🥠. If it is possible to select a second occupation, it must be a cook. I subscribe youtube channels [Chef Wang](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw), [老饭骨](https://www.youtube.com/channel/UCBJmYv3Vf_tKcQr5_qmayXg), and [小高姐的 Magic Ingredients](https://www.youtube.com/channel/UCCKlp1JI9Yg3-cUjKPdD3mw).
+I am fond of cooking 👩‍🍳🍚🏺🥠. If it is possible to select a second occupation, it must be a cook. I subscribe youtube channels [Chef Wang](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw), [老饭骨](https://www.youtube.com/channel/UCBJmYv3Vf_tKcQr5_qmayXg), and [小高姐的 Magic Ingredients](https://www.youtube.com/channel/UCCKlp1JI9Yg3-cUjKPdD3mw). -->
 
 
 ## Technique Books
@@ -59,23 +56,94 @@ Here are books 📚 that I like reviews a lot during development:
 
 ## Projects
 
-The following are some projects that are done as student or student research assistants. 
+Those projects below was done during my master student meanwhile being research assistant. 
 
-### Digital Earth based on WMS [link](https://github.com/penguinflys/Oriental_EYE)
+### PanUrban Dataset - a panoptic dataset of aerial images([link]({{"assets/files/Master_Thesis_Presentation.pdf" | relative_url}}))
 
-![image-center]({{ "/assets/images/digitalearth.png" | relative_url }}){: .align-center style="width: 100%;"}
-*Fig. 0 Visualization of Digital Earth with DEM model*
+PanUrban Dataset is a dataset with takes car and building as things and trees impervious surface etc. as stuff, locating on the city region of Vaihingen and Potsdam. Things denotes countable objects which can be seperated to be instances, but stuff is uncountable and more abstract, such as sky.
+
+| Vaihingen sample |  Potsdam sample |
+:-------------------------:|:-------------------------:
+![Vaihingen]({{"assets/images/DenseBuilding_Potsdam.png" | relative_url}})  |  ![Potsdam]({{"assets/images/DenseBuilding_Vaihingen.png"| relative_url}})
+
+Fig. Blue footprint encloses building instance, yellow footprint encloses car instance.
+
+| Apartment | Factory | Innercity | Parking | Residual |
+|:---------:|:---------:|:--------:|:-------:|:-------:|
+|![img]({{"assets/images/samples/apartment.jpg" | relative_url }})|![img]({{"assets/images/samples/factory.jpg" | relative_url }})|![img]({{"assets/images/samples/innercity.jpg" | relative_url }})|![img]({{"assets/images/samples/parking.jpg" | relative_url }})|![img]({{"assets/images/samples/residual.jpg" | relative_url }})|
+|![img]({{"assets/images/samples/apartment.png" | relative_url }})|![img]({{"assets/images/samples/factory.png" | relative_url }})|![img]({{"assets/images/samples/innercity.png" | relative_url }})|![img]({{"assets/images/samples/parking.png" | relative_url }})|![img]({{"assets/images/samples/residual.png" | relative_url }})|
+
+Fig. Dataset samples cross different city areas.
+
+This aerial image dataset has the following properties:
+
+* **Orthophoto**: Aerial Image dataset based on **orthogonal**([link](https://en.wikipedia.org/wiki/Orthophoto)) images with geospatial information, which can be directly used on measurement.
+* **Multiple Tasks**: allows task for object detection, instance segmentation, semantic segmentation, and panoptic segmentation.
+* **Adjacent Buildings**: unlike some datasets such as crowdAI, most buildings in our dataset are adjacent to their neighbors. In other words, it is __dense distributed__. thanks to the development of Instance Segmentation, the task to distinguish connected buildings is now possible.
+* **Full Range Augmentation**: utilize features across source blocks to extract more robust features.
+
+### Panoptic Segmentation on PanUrban dataset
+
+Take [PanopticFPN](https://arxiv.org/abs/1901.02446) as a baseline model, apply the model on PanUrban Dataset. Roatated bounding boxes are proposed and applied to fit rotated objects, such as buildings. The experiments result shows that rotated bounding box improve the result of instance segmentation, but not much on semantic segmentation. 
+
+
+| Panoptic Result | Semantic Label | Instance Label | Source Image |
+|:-----------------:|:----------------:|:----------------:|:--------------:|
+|![img]({{"assets/images/pred_samples/resarea2_Hameln0_pred.jpg" | relative_url }})|![img]({{"assets/images/pred_samples/resarea2_Hameln0_sem.png" | relative_url }})|![img]({{"assets/images/pred_samples/resarea2_Hameln0_gt.jpg" | relative_url }})|![img]({{"assets/images/pred_samples/resarea2_Hameln0_src.jpg" | relative_url }})|
+|![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_pred.jpg" | relative_url }}) |![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_sem.png" | relative_url }})|![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_gt.jpg" | relative_url }})|![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_src.png" | relative_url }})|
+
+*Fig. Visualization of PanUrban dataset Prediction*
 {: .text-center}
 
-This project is a teaching project which simulates the elevation of the earth and the depth of the ocean. It is initially based on the [icosahedron](https://en.wikipedia.org/wiki/Icosahedron) and iteratively refined in a deeper level to sample the local elevation. It can also simulate the gravity field if the data is in hand.
+### Real-time HD Map Calibration with Multiple Lidar
 
-Techniques: OpenGL, C++, Geographic Grid.
+![LIDARMAP]({{ "/assets/images/lidarmap.gif" | relative_url }}){: .align-center style="width: 100%;"}
 
-### LEGO Courier Student Toy Project
+* Prepare the measurement setup of 2 Lidars and a GPS receiver in a platform with a given calibration configuration. GPS could be used for localization, but here to synchronize the time of devices.
+* Code a ROS package to input Velodyne-64 and Velodyne-16 raw data and pose with timestamps, output calibrated point cloud to map to real-world.
+
+Techniques: C++, ROS, Sensor Calibration.
+
+### Dynamic Landmark based Visual Odometry(SFM)
+
+![image-center]({{ "/assets/images/ezgif.com-optimize.gif" | relative_url }}){: .align-center style="width: 100%;"}
+
+*Fig. 1 Visualization on Filtering of Matching points, below is the last frame, up is the current frame. Stereo images are aligned left and right. redpoints are removed.*
+{: .text-center}
+
+* Extract feature points with multiple keypoint methods for comparasion, such as SIFT, Harris, SURF, ORB, FREAK, BRISK, etc.
+* Filter false matching points via stereo matching in the RANSAC framework.
+* 3D motion estimation with frame-to-frame matching.
+* Structure and motion reconstruction, performance estimation(accuracy, efficiency).
+
+Techniques: C++, Visual Odometry, Scene Reconstruction.
+
+### Object Tracking and Motion Prediction via UKF and EKF.
+
+Tracking and trajectory prediction of preceding cars.
+![image-center]({{ "/assets/images/ukf-highway-projected.gif" | relative_url }}){: .align-center}
+
+
+*Fig. Visualization of prediction of prededing cars, source: [udacity](https://github.com/penguinflys/UdacitySensorFusion/tree/master/final_proj_uncented_kalman_filter_traffic_flow_tracking)*
+{: .text-center}
+
+Given: 
+1. Car detection & tracking algorithm via neural network.
+2. 3D active shape model(ASM) approximation method.
+
+Task: 
+* Filtering of point cloud and feature point via predicted bounding box
+* Point cloud clustering and dense matched feature points clustering.
+* ASM matching and object localization, and object matching.
+* Kalman Filtering(KF) vs. EFK vs. UFK w.r.t efficiency and accuracy.
+
+Techniques: Python, Object Tracking, Kalman Filtering, Motion Estimation.
+
+### LEGO Courier Student Toy Project (SLAM)
 
 {% include video id="Rj_TkF2gSKw?start=60" provider="youtube" %}
 
-This is the first project that requires knowledge of SLAM. It is developed in C++ with ROS as a communication tool, PCL, and OpenCV as data processing API. It is conducted in a closed arena with lots of poles and a short tunnel. The examiner set the arena scenario, delivering destination and courier born place randomly, which requires the robustness of the method. What I developed is in the last of the video, namely "SLAM method." The development can be mainly divided into the following pieces.
+LEGO Courier is located in an arena with lots of poles (forming a wall) and a short tunnel, poles and tunnel as well as destination are placed randomly. 
 
 <table>
   <thead>
@@ -118,42 +186,6 @@ This is the first project that requires knowledge of SLAM. It is developed in C+
 
 Techniques: C++, ROS, SLAM, Image Processing, LIDAR Processing.
 
-### Dynamic Landmark based Visual Odometry(SFM)
-
-![image-center]({{ "/assets/images/ezgif.com-optimize.gif" | relative_url }}){: .align-center style="width: 100%;"}
-
-*Fig. 1 Visualization on Filtering of Matching points, below is the last frame, up is the current frame. Stereo images are aligned left and right. redpoints are removed.*
-{: .text-center}
-
-This is a classic project on SFM
-* Extract feature points with multiple methods, such as SIFT, Harris, SURF, ORB, FREAK, BRISK, etc.
-* Filter false matching points via stereo matching in the RANSAC framework.
-* 3D motion estimation with frame-to-frame matching.
-* Map and motion reconstruction, performance estimation(accuracy, efficiency), and model selection.
-
-Techniques: C++, Visual Odometry, Scene Reconstruction.
-
-### Object Tracking and Motion Prediction via UKF and EKF.
-
-The scenario is the same as the last project, but this task is oriented to trajectory prediction preceding cars.
-![image-center]({{ "/assets/images/ukf-highway-projected.gif" | relative_url }}){: .align-center}
-
-
-*Fig. Visualization of prediction of prededing cars, source: [udacity](https://github.com/penguinflys/UdacitySensorFusion/tree/master/final_proj_uncented_kalman_filter_traffic_flow_tracking)*
-{: .text-center}
-
-Given: 
-1. Car detection & tracking algorithm via neural network.
-2. 3D active shape model(ASM) approximation method.
-
-Task: 
-* Filtering of point cloud and feature point via predicted bounding box
-* Point cloud clustering and dense matched feature points clustering.
-* ASM matching and object localization, and object matching.
-* Kalman Filtering(KF) vs. EFK vs. UFK w.r.t efficiency and accuracy.
-
-Techniques: Python, Object Tracking, Kalman Filtering, Motion Estimation.
-
 ### Trajectory Estimation with GPS + IMU based on Set-membership Kalman Filtering
 
 ![image-center]({{ "/assets/images/ikg_s4.jpg" | relative_url }}){: .align-center style="width: 100%;"}
@@ -167,48 +199,12 @@ The car is equipped with GPS and IMU sensor. In the conventional filtering metho
 
 Techniques: Filtering
 
-### Real-time HD Map Calibration with Multiple Lidar
+### Digital Earth based on WMS [link](https://github.com/penguinflys/Oriental_EYE)
 
-![LIDARMAP]({{ "/assets/images/lidarmap.gif" | relative_url }}){: .align-center style="width: 100%;"}
-
-* Prepare the measurement setup of 2 Lidar and a GPS receiver in a platform with a given calibration configuration. GPS could be used for localization, but here to synchronize the time of devices.
-* Code a ROS package to input Velodyne-64 and Velodyne-16 raw data, then output calibrated point cloud to map to real-world, car pose is given by Mobile-mapping-system, which has a super high precision on localization.
-
-Techniques: C++, ROS, Sensor Calibration.
-
-### PanUrban Dataset - a panoptic dataset of aerial images([link]({{"assets/files/Master_Thesis_Presentation.pdf" | relative_url}}))
-
-PanUrban Dataset is a dataset which takes car and building as things and trees impervious surface etc. as stuff, locating on the city region of Vaihingen and Potsdam. These datasets will be given to the public in a short time.
-
-| Vaihingen sample |  Potsdam sample |
-:-------------------------:|:-------------------------:
-![Vaihingen]({{"assets/images/DenseBuilding_Potsdam.png" | relative_url}})  |  ![Potsdam]({{"assets/images/DenseBuilding_Vaihingen.png"| relative_url}})
-
-Fig. Blue footprint encloses building instance, yellow footprint encloses car instance.
-
-| Apartment | Factory | Innercity | Parking | Residual |
-|:---------:|:---------:|:--------:|:-------:|:-------:|
-|![img]({{"assets/images/samples/apartment.jpg" | relative_url }})|![img]({{"assets/images/samples/factory.jpg" | relative_url }})|![img]({{"assets/images/samples/innercity.jpg" | relative_url }})|![img]({{"assets/images/samples/parking.jpg" | relative_url }})|![img]({{"assets/images/samples/residual.jpg" | relative_url }})|
-|![img]({{"assets/images/samples/apartment.png" | relative_url }})|![img]({{"assets/images/samples/factory.png" | relative_url }})|![img]({{"assets/images/samples/innercity.png" | relative_url }})|![img]({{"assets/images/samples/parking.png" | relative_url }})|![img]({{"assets/images/samples/residual.png" | relative_url }})|
-
-Fig. Samples cross different city areas.
-
-This dataset has the following properties:
-
-* **Orthophoto**: Aerial Image dataset based on **orthogonal**([link](https://en.wikipedia.org/wiki/Orthophoto)) images with geospatial information, which can be directly used on measurement.
-* **Multiple Tasks**: allows task for object detection, instance segmentation, semantic segmentation, and panoptic segmentation.
-* **Adjacent Buildings**: unlike some datasets such as crowdAI, most buildings in our dataset are adjacent to their neighbors. In other words, it is __dense distributed__. thanks to the development of Instance Segmentation, the task to distinguish connected buildings is now possible.
-* **Full Range Augmentation**: utilize features across source blocks to extract more robust features.
-
-### Panoptic Segmentation on PanUrban dataset
-
-Take [PanopticFPN](https://arxiv.org/abs/1901.02446) as an example model on PanUrban Dataset, with either rotated bounding box or axis-aligned bounding box.
-
-
-| Panoptic Result | Semantic Label | Instance Label | Source Image |
-|:-----------------:|:----------------:|:----------------:|:--------------:|
-|![img]({{"assets/images/pred_samples/resarea2_Hameln0_pred.jpg" | relative_url }})|![img]({{"assets/images/pred_samples/resarea2_Hameln0_sem.png" | relative_url }})|![img]({{"assets/images/pred_samples/resarea2_Hameln0_gt.jpg" | relative_url }})|![img]({{"assets/images/pred_samples/resarea2_Hameln0_src.jpg" | relative_url }})|
-|![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_pred.jpg" | relative_url }}) |![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_sem.png" | relative_url }})|![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_gt.jpg" | relative_url }})|![img]({{"assets/images/pred_samples/top_potsdam_7_8_IRRG4_src.png" | relative_url }})|
-
-*Fig. Visualization of PanUrban dataset Prediction*
+![image-center]({{ "/assets/images/digitalearth.png" | relative_url }}){: .align-center style="width: 100%;"}
+*Fig. 0 Digital Earth covered with DEM model*
 {: .text-center}
+
+This project is a educational project to simulates the elevation of the earth and the depth of the ocean etc. Earth scale grid techniques are apply to create an earth model. The sphere is initially based on the [icosahedron](https://en.wikipedia.org/wiki/Icosahedron) and iteratively refined to a deeper level to sample the local elevation. It can also simulate the gravity field or any other data source.
+
+Techniques: OpenGL, C++, Geographic Grid.
