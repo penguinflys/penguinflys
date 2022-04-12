@@ -31,16 +31,7 @@ I develop multi-sensor (camera, radar, IMU, GPS) perception and filter-based loc
 * __Robotic Localization__
 * __Robotic Perception__
 
-
-<!-- If you want to know whether a penguin can fly or not, the answer is NO! Following video might be the greatest Fools pranks of all time of BBC. -->
-
-<!-- {% include video id="9dfWzp7rYR4" provider="youtube" %} -->
-
 Please feel free to contact me [📧](mailto:yuanjielovejesus@gmail.com).
-
-<!-- ## Skills
-
-I am fond of cooking 👩‍🍳🍚🏺🥠. If it is possible to select a second occupation, it must be a cook. I subscribe youtube channels [Chef Wang](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw), [老饭骨](https://www.youtube.com/channel/UCBJmYv3Vf_tKcQr5_qmayXg), and [小高姐的 Magic Ingredients](https://www.youtube.com/channel/UCCKlp1JI9Yg3-cUjKPdD3mw). -->
 
 
 ## Technique Books
