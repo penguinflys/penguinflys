@@ -32,9 +32,9 @@ I develop multi-sensor (camera, radar, IMU, GPS) perception and filter-based loc
 * __Robotic Perception__
 
 
-<!-- If you want to know whether a penguin can fly or not, the answer is NO! Following video might be the greatest Fools pranks of all time of BBC.
+<!-- If you want to know whether a penguin can fly or not, the answer is NO! Following video might be the greatest Fools pranks of all time of BBC. -->
 
-{% include video id="9dfWzp7rYR4" provider="youtube" %} -->
+<!-- {% include video id="9dfWzp7rYR4" provider="youtube" %} -->
 
 Please feel free to contact me [📧](mailto:yuanjielovejesus@gmail.com).
 
