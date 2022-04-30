@@ -33,7 +33,6 @@ I develop multi-sensor (camera, radar, IMU, GPS) perception and filter-based loc
 
 Please feel free to contact me [📧](mailto:yuanjielovejesus@gmail.com).
 
-
 ## Technique Books
 
 Here are books 📚 that I like reviews a lot during development:
@@ -44,10 +43,9 @@ Here are books 📚 that I like reviews a lot during development:
 * [Deep Learning](https://www.deeplearningbook.org/)
 * [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 
-
 ## Projects
 
-Those projects below was done during my master student meanwhile being research assistant. 
+Those projects below was done during my master student meanwhile being research assistant.
 
 ### PanUrban Dataset - a panoptic dataset of aerial images([link]({{"assets/files/Master_Thesis_Presentation.pdf" | relative_url}}))
 
@@ -68,15 +66,14 @@ Fig. Dataset samples cross different city areas.
 
 This aerial image dataset has the following properties:
 
-* **Orthophoto**: Aerial Image dataset based on **orthogonal**([link](https://en.wikipedia.org/wiki/Orthophoto)) images with geospatial information, which can be directly used on measurement.
-* **Multiple Tasks**: allows task for object detection, instance segmentation, semantic segmentation, and panoptic segmentation.
-* **Adjacent Buildings**: unlike some datasets such as crowdAI, most buildings in our dataset are adjacent to their neighbors. In other words, it is __dense distributed__. thanks to the development of Instance Segmentation, the task to distinguish connected buildings is now possible.
-* **Full Range Augmentation**: utilize features across source blocks to extract more robust features.
+* __Orthophoto__: Aerial Image dataset based on __orthogonal__([link](https://en.wikipedia.org/wiki/Orthophoto)) images with geospatial information, which can be directly used on measurement.
+* __Multiple Tasks__: allows task for object detection, instance segmentation, semantic segmentation, and panoptic segmentation.
+* __Adjacent Buildings__: unlike some datasets such as crowdAI, most buildings in our dataset are adjacent to their neighbors. In other words, it is __dense distributed__. thanks to the development of Instance Segmentation, the task to distinguish connected buildings is now possible.
+* __Full Range Augmentation__: utilize features across source blocks to extract more robust features.
 
 ### Panoptic Segmentation on PanUrban dataset
 
-Take [PanopticFPN](https://arxiv.org/abs/1901.02446) as a baseline model, apply the model on PanUrban Dataset. Roatated bounding boxes are proposed and applied to fit rotated objects, such as buildings. The experiments result shows that rotated bounding box improve the result of instance segmentation, but not much on semantic segmentation. 
-
+Take [PanopticFPN](https://arxiv.org/abs/1901.02446) as a baseline model, apply the model on PanUrban Dataset. Roatated bounding boxes are proposed and applied to fit rotated objects, such as buildings. The experiments result shows that rotated bounding box improve the result of instance segmentation, but not much on semantic segmentation.
 
 | Panoptic Result | Semantic Label | Instance Label | Source Image |
 |:-----------------:|:----------------:|:----------------:|:--------------:|
@@ -109,20 +106,21 @@ Techniques: C++, ROS, Sensor Calibration.
 
 Techniques: C++, Visual Odometry, Scene Reconstruction.
 
-### Object Tracking and Motion Prediction via UKF and EKF.
+### Object Tracking and Motion Prediction via UKF and EKF
 
 Tracking and trajectory prediction of preceding cars.
 ![image-center]({{ "/assets/images/ukf-highway-projected.gif" | relative_url }}){: .align-center}
 
-
 *Fig. Visualization of prediction of prededing cars, source: [udacity](https://github.com/penguinflys/UdacitySensorFusion/tree/master/final_proj_uncented_kalman_filter_traffic_flow_tracking)*
 {: .text-center}
 
-Given: 
+Given:
+
 1. Car detection & tracking algorithm via neural network.
 2. 3D active shape model(ASM) approximation method.
 
-Task: 
+Task:
+
 * Filtering of point cloud and feature point via predicted bounding box
 * Point cloud clustering and dense matched feature points clustering.
 * ASM matching and object localization, and object matching.
@@ -134,7 +132,7 @@ Techniques: Python, Object Tracking, Kalman Filtering, Motion Estimation.
 
 {% include video id="Rj_TkF2gSKw?start=60" provider="youtube" %}
 
-LEGO Courier is located in an arena with lots of poles (forming a wall) and a short tunnel, poles and tunnel as well as destination are placed randomly. 
+LEGO Courier is located in an arena with lots of poles (forming a wall) and a short tunnel, poles and tunnel as well as destination are placed randomly.
 
 <table>
   <thead>
@@ -163,8 +161,6 @@ LEGO Courier is located in an arena with lots of poles (forming a wall) and a sh
 |  Ultrasonic Unit                   | WIFI Connected Computers(brain) |
 | Odometry(broken)                   |          Router(communication)          | -->
 
-
-
 * Calibration: The courier has to run in a consistent coordinate system, which means the camera and lidar need to be calibrated to a global coordinate system. This process is simplified to align all coordinates to the predefined 2D image coordinate system. A robot coordinate is accessed by a chessboard fixed in the courier body. Because the odometry of the courier is broken, visual odometry plays an important role.
 
 * Localization: Localization from the external camera is not accurate but enough for this scenario. A monocular camera has no scale estimation, although it can be approximated by cheeseboard grid size scale estimation. But it did not perform as thought. Finally, coordinates from the camera are simply triangulated with a fixed height parameter. Localization from LIDAR is initialized by coordinates from the camera but updated with local measurement of similarity transformation prediction via ICP algorithm. The location of the courier is determined by Kalman filtering.
@@ -186,7 +182,7 @@ Techniques: C++, ROS, SLAM, Image Processing, LIDAR Processing.
 
 Based on Paper: [Geo-Referencing of a Multi-Sensor System Based on Set-Membership Kalman Filter](https://www.researchgate.net/publication/327489443_Geo-Referencing_of_a_Multi-Sensor_System_Based_on_Set-Membership_Kalman_Filter).
 
-The car is equipped with GPS and IMU sensor. In the conventional filtering method, the object is seen as a rigid body, and thus motion estimation is reduced as similarity transformation. However, non-rigid objects also need motion estimation, such as fluids in a ballon, which transforms itself when the water pressure changes. Uncertainty is seen as **ellipsoid space** surrounded by the probabilistic distribution. The application here is seen as a generalization test on a typical filtering scenario.
+The car is equipped with GPS and IMU sensor. In the conventional filtering method, the object is seen as a rigid body, and thus motion estimation is reduced as similarity transformation. However, non-rigid objects also need motion estimation, such as fluids in a ballon, which transforms itself when the water pressure changes. Uncertainty is seen as __ellipsoid space__ surrounded by the probabilistic distribution. The application here is seen as a generalization test on a typical filtering scenario.
 
 Techniques: Filtering
 
