@@ -8,7 +8,7 @@ categories:
 tags:
   - Direct Method
   - Template Matching
-published: false
+published: true
 comments: true
 ---
 

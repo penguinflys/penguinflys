@@ -10,7 +10,7 @@ categories:
 tags:
   - Deep Learning
 
-published: false
+published: true
 ---
 
 > In this post, the basic knowledge of deep learning involving classification and regression shall be explained. Firstly, the working mechanism and mathematical abstraction of neural networks and procedures to train a network. Secondly, the detection task and segmentation task based on CNN, including essential breakthroughs such as ResNet and FCN. Third, basic principles on object detection are introduced.

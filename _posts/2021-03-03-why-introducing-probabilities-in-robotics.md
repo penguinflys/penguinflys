@@ -6,7 +6,7 @@ categories:
   - Fundamental
 tags:
   - SLAM
-published: false
+published: true
 ---
 
 > Uncertainty happens during observation in the real world. Robotics observe the world using sensors, and the uncertainty of sensors is modelled by probabilistic models, such as gaussian distribution. 
