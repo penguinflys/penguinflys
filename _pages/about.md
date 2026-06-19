@@ -21,7 +21,7 @@ author_profile: true
 
 Hi there! 🎅🏼 My name is Jie Yuan, and I'm really glad you stopped by!
 
-I currently work as a **Strategic Technology Planning Engineer** in the **3D Imaging** direction, where my work focuses on **Scene Representation** (such as NeRF and 3DGS) and **Camera Representations** (such as Plücker Rays). I also act as a **project manager and technical lead** coordinating research collaborations with universities. Currently, I am shifting my focus back to core robotics research.
+I currently work as a **Strategic Technology Planning Engineer** in the **3D Imaging** direction, where my work focuses on **Scene Representation** (such as NeRF and 3DGS) and **Camera Representations** (such as Plücker Rays). I also act as a **project manager** coordinating research collaborations with universities. Currently, I am shifting my focus back to core robotics research.
 
 I graduated from the [Leibniz University Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/), where I specialized in SLAM and geometrical computer vision. I do most of my development using Python and C++, and occasionally used MATLAB during my studies. My interests are in developing multi-sensor perception (integrating camera, radar, IMU, and GPS) and filtering-based (such as Kalman) localization for mobile robots, as well as deep-learning-based geometry learning. My background is centered around autonomous agents, such as assistant driving systems (though I also have some past experience with reinforcement learning for automatic control).
 
