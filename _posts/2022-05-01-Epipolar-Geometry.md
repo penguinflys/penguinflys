@@ -9,7 +9,7 @@ tags:
   - Essential Matrix
   - Fundmental Matrix
   - Epipolar Geometry
-published: true
+published: false
 comments: true
 ---
 
