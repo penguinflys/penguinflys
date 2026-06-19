@@ -17,7 +17,7 @@ toc_sticky: true
 comments: true
 author_profile: true
 ---
-## Biography
+## Intro
 
 Hello 🎅🏼, my name is Jie Yuan. Welcome to my site.
 
