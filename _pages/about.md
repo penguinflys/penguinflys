@@ -31,7 +31,7 @@ I develop multi-sensor (camera, radar, IMU, GPS) perception and filter-based loc
 * __Robotic Localization__
 * __Robotic Perception__
 
-Please feel free to contact me [📧](mailto:yuanjielovejesus@gmail.com).
+Please feel free to contact me.
 
 ## Technique Books
 
