@@ -103,7 +103,7 @@ Techniques: C++, Visual Odometry, Scene Reconstruction.
 Tracking and trajectory prediction of preceding cars.
 ![image-center]({{ "/assets/images/ukf-highway-projected.gif" | relative_url }}){: .align-center}
 
-*Fig. Visualization of prediction of prededing cars, source: [udacity](https://github.com/penguinflys/UdacitySensorFusion/tree/master/final_proj_uncented_kalman_filter_traffic_flow_tracking)*
+*Fig. Visualization of prediction of prededing cars, source: [udacity](https://github.com/jyuan-dev/UdacitySensorFusion/tree/master/final_proj_uncented_kalman_filter_traffic_flow_tracking)*
 {: .text-center}
 
 Given:
@@ -178,7 +178,7 @@ The car is equipped with GPS and IMU sensor. In the conventional filtering metho
 
 Techniques: Filtering
 
-### Digital Earth based on WMS [link](https://github.com/penguinflys/Oriental_EYE)
+### Digital Earth based on WMS [link](https://github.com/jyuan-dev/Oriental_EYE)
 
 ![image-center]({{ "/assets/images/digitalearth.png" | relative_url }}){: .align-center style="width: 100%;"}
 *Fig. 0 Digital Earth covered with DEM model*

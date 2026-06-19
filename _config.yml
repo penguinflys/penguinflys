@@ -16,14 +16,14 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Penguinflys' Log"
+title                    : "Jyuan-dev's Log"
 title_separator          : "|"
 subtitle                 : "Dive deep to learn" # site tagline that appears below site title in masthead
 name                     :  "Jie Yuan"
 description              : "bling bling, good idea"
-url                      : "https://penguinflys.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/penguinflys" # the subpath of your site, e.g. "/blog"
-repository               : "penguinflys/penguinflys" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+url                      : "https://jyuan-dev.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/jyuan-dev" # the subpath of your site, e.g. "/blog"
+repository               : "jyuan-dev/jyuan-dev" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/utils/phillip-glickman-2umO15jsZKM-unsplash.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/utils/weblogo.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -32,7 +32,7 @@ words_per_minute         : 160
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : penguinflys # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : jyuan-dev # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -96,7 +96,7 @@ analytics:
 author:
   name             : Jie Yuan
   avatar           : "assets/utils/selfie.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Nice to see you here. <br> Penguin is my nickname. "
+  bio              : "Nice to see you here. "
   location         : "Hannover, Germmany"
   email            : 
   links:
@@ -111,7 +111,7 @@ author:
       url: "https://www.facebook.com/jie.yuan.52459/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/penguinflys"
+      url: "https://github.com/jyuan-dev"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -130,7 +130,7 @@ footer:
       url: "https://www.facebook.com/jie.yuan.52459/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/penguinflys"
+      url: "https://github.com/jyuan-dev"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
