@@ -31,17 +31,9 @@ I develop multi-sensor (camera, radar, IMU, GPS) perception and filter-based loc
 * __Robotic Localization__
 * __Robotic Perception__
 
+For my technical background, several key literature works serve as my foundational references, including [*Probabilistic Robotics*](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf) for localization, [*State Estimation for Robotics*](http://asrl.utias.utoronto.ca/~tdb/bib/barfoot_ser17.pdf), [*Multiple View Geometry in Computer Vision*](https://www.amazon.com/Multiple-View-Geometry-Computer-Vision/dp/0521540518) for computer vision, and [*Pattern Recognition and Machine Learning*](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) for machine learning.
+
 Please feel free to contact me at jyuanhp [at] gmail.com.
-
-## Technique Books
-
-Here are books 📚 that I like reviews a lot during development:
-
-* [Probabilistic Robotics](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf)
-* [State Estimation for Robotics](http://asrl.utias.utoronto.ca/~tdb/bib/barfoot_ser17.pdf)
-* [Multiple View Geometry in Computer Vision](https://www.amazon.com/Multiple-View-Geometry-Computer-Vision/dp/0521540518)
-* [Deep Learning](https://www.deeplearningbook.org/)
-* [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 
 ## Projects
 
