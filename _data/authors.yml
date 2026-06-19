@@ -2,9 +2,6 @@ Jie Yuan:
   name: "Jie Yuan"
   bio: "Ask and it will be given to you; <br>seek and you will find; <br>knock and the door will be opened to you."
   links:
-    - label: "jyuanhp [at] gmail.com"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "#"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/penguinflys"
