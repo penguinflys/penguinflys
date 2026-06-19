@@ -23,13 +23,7 @@ Hello 🎅🏼, my name is Jie Yuan. Welcome to my site.
 
 I am a graduate of the [Leibniz University Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in Simultaneous Localization and Mapping(SLAM) and Computer Vision based on Deep Learning. Python (for DL) and C++ (for SLAM) are my principal developing languages, sometimes I use Matlab to verify algorithms.
 
-I develop multi-sensor (camera, radar, IMU, GPS) perception and filter-based localization for mobile robotic. Besides, deep-learning-based scene understanding and reinforcement learning for automatic control is also a major in my study. My study program is combines production and learning - working in teams to produce practical applications supporting autonomous driving while applying fresh knowledge from study. My relevant areas are listed as following.
-
-* __HD Mapping__
-* __Scene Segmentation__
-* __Object Tracking__
-* __Robotic Localization__
-* __Robotic Perception__
+I develop multi-sensor (camera, radar, IMU, GPS) perception and filter-based localization for mobile robotics. Besides, deep-learning-based scene understanding and reinforcement learning for automatic control are also major focuses of my study. My study program combines production and learning - working in teams to produce practical applications supporting autonomous driving while applying fresh knowledge from study.
 
 For my technical background, several key literature works serve as my foundational references, including [*Probabilistic Robotics*](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf) for localization, [*State Estimation for Robotics*](http://asrl.utias.utoronto.ca/~tdb/bib/barfoot_ser17.pdf), [*Multiple View Geometry in Computer Vision*](https://www.amazon.com/Multiple-View-Geometry-Computer-Vision/dp/0521540518) for computer vision, and [*Pattern Recognition and Machine Learning*](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) for machine learning.
 
