@@ -100,6 +100,9 @@ author:
   location         : "Hannover, Germmany"
   email            : 
   links:
+    - label: "jyuanhp [at] gmail.com"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "#"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
