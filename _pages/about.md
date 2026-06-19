@@ -19,15 +19,17 @@ author_profile: true
 ---
 ## Intro
 
-Hello 🎅🏼, my name is Jie Yuan. Welcome to my site.
+Hi there! 🎅🏼 My name is Jie Yuan, and I'm really glad you stopped by!
 
-I am a graduate of the [Leibniz University Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) specializing in Simultaneous Localization and Mapping(SLAM) and Computer Vision based on Deep Learning. Python (for DL) and C++ (for SLAM) are my principal developing languages, sometimes I use Matlab to verify algorithms.
+I currently work as a **Strategic Technology Planning Engineer** in the **3D Imaging** direction, where my work focuses on **Scene Representation** (such as NeRF and 3DGS) and **Camera Representations** (such as Plücker Rays). I also act as a **project manager and technical lead** coordinating research collaborations with universities. Currently, I am shifting my focus back to core robotics research.
 
-I develop multi-sensor (camera, radar, IMU, GPS) perception and filter-based localization for mobile robotics. Besides, deep-learning-based scene understanding and reinforcement learning for automatic control are also major focuses of my study. My study program combines production and learning - working in teams to produce practical applications supporting autonomous driving while applying fresh knowledge from study.
+Prior to this, I graduated from the [Leibniz University Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/), specializing in SLAM and geometrical computer vision. I occasionally used MATLAB during my studies.
 
-For my technical background, several key literature works serve as my foundational references, including [*Probabilistic Robotics*](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf) for localization, [*State Estimation for Robotics*](http://asrl.utias.utoronto.ca/~tdb/bib/barfoot_ser17.pdf), [*Multiple View Geometry in Computer Vision*](https://www.amazon.com/Multiple-View-Geometry-Computer-Vision/dp/0521540518) for computer vision, and [*Pattern Recognition and Machine Learning*](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) for machine learning.
+I do most of my development using Python and C++. My interests lie in developing multi-sensor perception (integrating camera, radar, IMU, and GPS) and filtering-based (such as Kalman) localization for mobile robots, as well as deep-learning-based geometry learning. My background is centered around autonomous agents, such as assistant driving systems (though I also have some past experience with reinforcement learning for automatic control).
 
-Please feel free to contact me at jyuanhp [at] gmail.com.
+For my technical background, several foundational works have been incredibly helpful, including [*Probabilistic Robotics*](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf) for localization, [*State Estimation for Robotics*](http://asrl.utias.utoronto.ca/~tdb/bib/barfoot_ser17.pdf), [*Multiple View Geometry in Computer Vision*](https://www.amazon.com/Multiple-View-Geometry-Computer-Vision/dp/0521540518) for computer vision, and [*Pattern Recognition and Machine Learning*](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) for machine learning.
+
+If you'd like to chat about robotics or just say hello, please feel free to reach out to me at jyuanhp [at] gmail.com. I'd love to connect!
 
 ## Projects
 
