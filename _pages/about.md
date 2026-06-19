@@ -19,13 +19,13 @@ author_profile: true
 ---
 ## Intro
 
-Hi there! 🎅🏼 My name is Jie Yuan, and I'm really glad you stopped by!
+I am Jie Yuan, an engineer working on 3D vision, robotics perception, and computational photography systems.
 
-I currently work as a **Strategic Technology Planning Engineer** in the **3D Imaging** direction, where my work focuses on **Scene Representation** (such as NeRF and 3DGS) and **Camera Representations** (such as Plücker Rays). I also act as a **project manager** coordinating research collaborations with universities. Currently, I am shifting my focus back to core robotics research.
+My work focuses on building geometry-aware visual systems, including 3D imaging, camera representation, neural scene representations such as NeRF and 3D Gaussian Splatting, and perception pipelines for real-world applications. I am especially interested in turning computer vision and robotics algorithms into reliable engineering systems.
 
-I graduated from the [Leibniz University Hannover](https://www.uni-hannover.de/) program [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/), where I specialized in SLAM and geometrical computer vision. I do most of my development using Python and C++, and occasionally used MATLAB during my studies. My interests are in developing multi-sensor perception (integrating camera, radar, IMU, and GPS) and filtering-based (such as Kalman) localization for mobile robots, as well as deep-learning-based geometry learning. My background is centered around autonomous agents, such as assistant driving systems (though I also have some past experience with reinforcement learning for automatic control).
+My technical background includes SLAM, visual odometry, multi-sensor fusion, Kalman filtering, semantic and panoptic segmentation, object tracking, and geometric computer vision. I graduated from the [Navigation and Field Robotics](https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/navigation-and-field-robotics/) program at [Leibniz University Hannover](https://www.uni-hannover.de/), where I worked on localization, mapping, and perception for mobile robots.
 
-For my technical background, several foundational works have been incredibly helpful, including [*Probabilistic Robotics*](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf) for localization, [*State Estimation for Robotics*](http://asrl.utias.utoronto.ca/~tdb/bib/barfoot_ser17.pdf), [*Multiple View Geometry in Computer Vision*](https://www.amazon.com/Multiple-View-Geometry-Computer-Vision/dp/0521540518) for computer vision, and [*Pattern Recognition and Machine Learning*](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) for machine learning.
+Currently, I work on 3D imaging and computational photography, with a focus on connecting geometry, camera modeling, and product-oriented visual experiences.
 
 If you'd like to chat about robotics or just say hello, please feel free to reach out to me at jyuanhp [at] gmail.com. I'd love to connect!
 
